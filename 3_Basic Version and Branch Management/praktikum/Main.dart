@@ -3,4 +3,6 @@ main() {
   print("Feature A");
   print("Feature B");
   print("Feature F");
+  print("Feature C");
+  print("Feature D");
 }
