@@ -4,4 +4,5 @@ main() {
   print("Feature 1");
   print("Feature B");
   print("Feature 2");
+  print("Conflict A");
 }
