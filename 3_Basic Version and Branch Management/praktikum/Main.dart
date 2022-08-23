@@ -7,4 +7,6 @@ main() {
   print("Stash 1");
   print("Stash 2");
   print("Feature 2");
+  print("Conflict A");
+  print("Conflict 2");
 }
