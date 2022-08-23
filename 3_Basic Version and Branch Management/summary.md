@@ -1,6 +1,8 @@
-Poin Pertama : Version Control
-Poin Kedua : Basic Version
-Poin Ketiga : Branch Management (Git)
+# RESUME SECTION 3 BASIC VERSION AND BRANCH MANAGEMENT
+
+## Poin Pertama : Version Control
+## Poin Kedua : Basic Version
+## Poin Ketiga : Branch Management (Git)
 
 Pembelajaran :
 1. Pembuatan Repositories Pada Github
