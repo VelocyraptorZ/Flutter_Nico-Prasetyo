@@ -13,41 +13,50 @@ Mengatur versi dari source code program
 Install dan Setup Github Window, Mac, atau Linux
 3. Setting Up <br>
 a. git init 
-<br> digunakan untuk membuat repository di file lokal. <br>
+<br> perintah yang digunakan untuk membuat repository di file lokal. <br>
 b. git clone 
-<br> digunakan untuk mengkloning repository lokal. <br>
+<br> perintah yang digunakan untuk mengkloning repository lokal. <br>
 c. git config
 <br>  <br> 
+
 4. Saving Changes <br>
 a. git status
-<br> digunakan untuk mengetahui sebuah status dari sebuah repository lokal. <br> 
+<br> perintah yang digunakan untuk mengetahui sebuah status dari sebuah repository lokal. <br> 
 b. git add
-<br> digunakan untuk menambahkan file baru di repository yang dipilih. <br> 
+<br> perintah yang digunakan untuk menambahkan file baru di repository yang dipilih. <br> 
 c. git commit
-<br> digunakan untuk menyimpan perubahan yang sudah dilakukan, namun tidak ada perubahan yang terjadi pada remote repository. <br> 
+<br> perintah yang digunakan untuk menyimpan perubahan yang sudah dilakukan, namun tidak ada perubahan yang terjadi pada remote repository. <br> 
 d. git diff
 <br> <br> 
 e. git stash
 <br> <br> 
 f. git ignore
 <br> <br> 
+
 5. Inspecting Repository and Undoing <br>
 a. git log  
 <br> <br>
 b. git checkout
-<br> digunakan untuk menukar branch yang aktif dengan bracht yang sudah dipilih. <br> 
+<br> perintah yang digunakan untuk menukar branch yang aktif dengan bracht yang sudah dipilih. <br> 
 c. git reset
 <br> <br> 
+
 6. Syncing <br>
 a. git remote
 <br> <br> 
 b. git fetch
 <br> <br> 
 c. git push
-<br> digunakan dalam mengirimkan perubahan file yang dilakukan setelah di commit ke remote repository. <br> 
+<br> perintah yang digunakan dalam mengirimkan perubahan file yang dilakukan setelah di commit ke remote repository. <br> 
 d. git pull 
 <br> <br>
-7. Branches
+
+7. Branches <br>
+a. git branch
+<br> perintah untuk melihat semua cabang di repository. <br> 
+b. git merge
+<br> perintah yang digunakan untuk menggabungkan cabang aktif serta cabang yang dipilih. <br> 
+
 8. Pull Request
 9. Workflow Collaboration
 
