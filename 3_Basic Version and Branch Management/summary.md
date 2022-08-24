@@ -34,7 +34,7 @@ f. git ignore
 <br> cara git untuk mengabaikan file yang dimasukan dalam daftar .gitignore agar tidak diikut sertakan pada proses git push. <br> 
 
 5. Inspecting Repository and Undoing <br>
-a. git log  
+a. git log
 <br> perintah yang digunakan untuk melihat perubahan apa saja yang terjadi di sebuah repo. <br>
 b. git checkout
 <br> perintah yang digunakan untuk menukar branch yang aktif dengan bracht yang sudah dipilih. <br> 
