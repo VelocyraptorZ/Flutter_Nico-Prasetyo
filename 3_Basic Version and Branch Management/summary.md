@@ -1,34 +1,52 @@
 # RESUME SECTION 3 BASIC VERSION AND BRANCH MANAGEMENT
 
 ## Data Diri
-### Nomor Urut  : 1_016FLC_34
-### Nama        : Nico Prasetyo
+Nomor Urut  : 1_016FLC_34 <br>
+Nama        : Nico Prasetyo
 
 ## Summary
 Version Control, Basic Version dan Branch Management (Git)
 
-1. Versioning
-2. Git Install
-3. Setting Up
-a. git init
-b. git clone
+1. Versioning <br>
+Mengatur versi dari source code program
+2. Git Install <br>
+Install dan Setup Github Window, Mac, atau Linux
+3. Setting Up <br>
+a. git init 
+<br> digunakan untuk membuat repository di file lokal. <br>
+b. git clone 
+<br> digunakan untuk mengkloning repository lokal. <br>
 c. git config
-4. Saving Changes
+<br>  <br> 
+4. Saving Changes <br>
 a. git status
+<br> digunakan untuk mengetahui sebuah status dari sebuah repository lokal. <br> 
 b. git add
+<br> digunakan untuk menambahkan file baru di repository yang dipilih. <br> 
 c. git commit
+<br> digunakan untuk menyimpan perubahan yang sudah dilakukan, namun tidak ada perubahan yang terjadi pada remote repository. <br> 
 d. git diff
+<br> <br> 
 e. git stash
+<br> <br> 
 f. git ignore
-5. Inspecting Repository and Undoing
-a. git log
-b. git checkout 
+<br> <br> 
+5. Inspecting Repository and Undoing <br>
+a. git log  
+<br> <br>
+b. git checkout
+<br> digunakan untuk menukar branch yang aktif dengan bracht yang sudah dipilih. <br> 
 c. git reset
-6. Syncing
+<br> <br> 
+6. Syncing <br>
 a. git remote
+<br> <br> 
 b. git fetch
+<br> <br> 
 c. git push
-d. git pull
+<br> digunakan dalam mengirimkan perubahan file yang dilakukan setelah di commit ke remote repository. <br> 
+d. git pull 
+<br> <br>
 7. Branches
 8. Pull Request
 9. Workflow Collaboration
