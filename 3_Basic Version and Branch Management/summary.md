@@ -13,7 +13,7 @@
 1. Pembuatan Repositories Pada Github
 ![Test](screenshots/Screenshot_Pembuatan%20Repositories.png)
 
-2. Implementasi Git branch
+2. Implementasi Git branch main, development, featureA dan featureB
 ![Test](screenshots/Screenshot_Implementasi%20Penggunaan%20Branch.png)
 
 3. Implementasi Git add, commit, push, pull, merge, stash
