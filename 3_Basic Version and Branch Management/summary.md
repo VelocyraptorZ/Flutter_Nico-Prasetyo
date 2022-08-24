@@ -87,5 +87,5 @@ Idealnya, Workflow Collaboration adalah kumpulan tugas paralel dan berurutan yan
 ![Test](screenshots/Screenshot_Penanganan%20Conflict%20Merge%20from%20featureB%20to%20development.png)
 
 ## Task 5 (Essay Praktikum)
-5. Implementasi merge pada branch Fast Forward dan No Fast Forward 
+5. Implementasi merge No Fast Forward pada branch development ke main
 ![Test](screenshots/Screenshot_Implementasi%20Merge%20No%20Fast%20Forward%20(Development%20Branch%20To%20Main).png)
