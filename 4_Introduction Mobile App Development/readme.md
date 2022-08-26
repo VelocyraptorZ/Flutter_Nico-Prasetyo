@@ -60,9 +60,9 @@ Interpreter
 2 Macam Mobile App Development yaitu :
 
 a. IOS <br>
-Berjalan pada sistem operasi IOS
+Berjalan pada sistem operasi IOS,
 Perangkat sistem operasi ini dikembangkan oleh Apple
 
 b. Android <br>
-Berjalan pada sistem operasi Android
+Berjalan pada sistem operasi Android,
 Perangkat sistem operasi ini dikembangkan secara Open Source semua orang dapat berkontribusi dalam pengembangan Android
