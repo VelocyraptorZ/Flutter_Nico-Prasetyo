@@ -33,7 +33,7 @@ e. C++, Java dan C# untuk Dekstop Development. <br>
 f. Dart untuk Multi Platform Development. <br>
 g. C++ dan C# untuk Game Development. 
 
-2 Macam Software untuk Menjalankan / Menterjemahkan Bahasa Pemrograman :
+Ada 2 Macam Software untuk Menjalankan / Menterjemahkan Bahasa Pemrograman :
 
 a. Compiler <br>
 Software yang digunakan untuk membaca perintah perintah dalam bahasa pemrograman dan mengubahnya kebahasa lain, biasanya dalam bentuk yang dikenali komputer seperti machine code.
