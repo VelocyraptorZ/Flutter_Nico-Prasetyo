@@ -1,0 +1,9 @@
+# RESUME SECTION 4 INTRODUCTION MOBILE APP DEVELOPMENT
+
+## Data Diri
+Nomor Urut  : 1_016FLC_34 <br>
+Nama        : Nico Prasetyo
+
+## Summary
+INTRODUCTION MOBILE APP DEVELOPMENT
+
