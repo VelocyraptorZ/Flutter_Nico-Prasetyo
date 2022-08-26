@@ -30,5 +30,3 @@ b. 3 aplikasi yang dapat berjalan di Android tetapi tidak di iOS.
 - Podcast Republic
 - Poweramp
 - Muzei
-
-Test
