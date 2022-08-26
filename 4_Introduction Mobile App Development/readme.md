@@ -12,35 +12,35 @@ Software adalah Perangkat lunak yang tersimpan dan dapat dikendalikan pada siste
 
 ### Jenis Software
 
-Web
+Web <br>
 Software web diakses menggunakan web browser dan memerlukan internet untuk membukanya
 
-Dekstop
+Dekstop <br>
 Software ini berjalan pada perangkat dekstop ,sofware ini diperlukan langkah instalasi pada dekstop dan dapat dibuka tanpa menggunakan internet
 
-Mobile
+Mobile <br>
 Software yang terdapat pada perangkat mobile seperti tablet dan smartphone, software ini perlu instalasi pada perangkat mobile instalasi biasa disediakan pada aplikasi store, dan dapat diakses tanpa menggunakan internet
 
 ### Pengembangan Software
 Bahasa pemrograman adalah rangkaian teks yang digunakan untuk memberi perintah kepada komputer dan berguna  untuk pengembangan software 
 
-Macam - macam Bahasa Pemrograman :
-a. Java & Kotlin untuk Android Development.
-b. Swift & Objective C untuk IOS Development.
-c. PHP, CSS, HTML dan Javascript untuk Web Development.
-d. Phyton untuk Data Science dan Analysist Development.
-e. C++, Java dan C# untuk Dekstop Development.
-f. Dart untuk Multi Platform Development.
-g. C++ dan C# untuk game Development.
+Macam - macam Bahasa Pemrograman : <br>
+a. Java & Kotlin untuk Android Development. <br>
+b. Swift & Objective C untuk IOS Development. <br>
+c. PHP, CSS, HTML dan Javascript untuk Web Development. <br>
+d. Phyton untuk Data Science dan Analysist Development. <br>
+e. C++, Java dan C# untuk Dekstop Development. <br>
+f. Dart untuk Multi Platform Development. <br>
+g. C++ dan C# untuk game Development. 
 
 2 Macam Software untuk Menjalankan / Menterjemahkan Bahasa Pemrograman :
 
-a. Compiler
+a. Compiler <br>
 Software yang digunakan untuk membaca perintah perintah dalam bahasa pemrograman dan mengubahnya kebahasa lain, biasanya dalam bentuk yang dikenali komputer seperti machine code.
 
 NB : machine code adalah kumpulan instruksi yang hanya dikenali komputer
 
-b. Interpreter
+b. Interpreter <br>
 Software yang digunakan untuk membaca perintah perintah dalam bahasa pemrograman dan langsung menjalankan perintah tersebut tanpa mengubah kebahasa lain.
 
 Perbedaan Compiler dan Interpreter
@@ -59,10 +59,10 @@ Interpreter
 
 2 Macam Mobile App Development yaitu :
 
-a. IOS
+a. IOS <br>
 Berjalan pada sistem operasi IOS
 Perangkat sistem operasi ini dikembangkan oleh Apple
 
-b. Android
+b. Android <br>
 Berjalan pada sistem operasi Android
 Perangkat sistem operasi ini dikembangkan secara Open Source semua orang dapat berkontribusi dalam pengembangan Android
