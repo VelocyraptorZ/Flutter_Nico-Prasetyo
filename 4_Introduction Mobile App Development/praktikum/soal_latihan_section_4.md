@@ -14,8 +14,8 @@
 - Ruby untuk Multi Platform. 
 - Phyton untuk Multi Platform.
 - HTML untuk Website dan Mobile App
-- PHP untuk Website Mobile App
-- CSS untuk Website Mobile App
+- PHP untuk Website dan Mobile App
+- CSS untuk Website dan Mobile App
 
 2. Kumpulkan 3 aplikasi yang dapat berjalan di iOS tetapi tidak di Android, juga 3 aplikasi yang dapat berjalan di Android tetapi tidak di iOS!
 
