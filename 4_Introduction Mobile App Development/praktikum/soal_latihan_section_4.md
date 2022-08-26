@@ -19,13 +19,13 @@
 
 2. Kumpulkan 3 aplikasi yang dapat berjalan di iOS tetapi tidak di Android, juga 3 aplikasi yang dapat berjalan di Android tetapi tidak di iOS!
 
-a. 3 aplikasi yang dapat berjalan di iOS tetapi tidak di Android
+a. 3 aplikasi yang dapat berjalan di iOS tetapi tidak di Android.
 
 - Overcast
 - Tweetbot
 - Enlight
 
-b. 3 aplikasi yang dapat berjalan di Android tetapi tidak di iOS
+b. 3 aplikasi yang dapat berjalan di Android tetapi tidak di iOS.
 
 - Podcast Republic
 - Poweramp
