@@ -61,8 +61,8 @@ Interpreter
 
 a. IOS <br>
 Berjalan pada sistem operasi IOS,
-Perangkat sistem operasi ini dikembangkan oleh Apple
+Perangkat sistem operasi ini dikembangkan oleh Apple.
 
 b. Android <br>
 Berjalan pada sistem operasi Android,
-Perangkat sistem operasi ini dikembangkan secara Open Source semua orang dapat berkontribusi dalam pengembangan Android
+Perangkat sistem operasi ini dikembangkan secara Open Source semua orang dapat berkontribusi dalam pengembangan Android.
