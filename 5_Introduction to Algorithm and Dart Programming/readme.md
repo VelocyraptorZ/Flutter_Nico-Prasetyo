@@ -27,6 +27,7 @@ Fungsi Main
 - Bagian yang dijalankan pertama kali
 - Tipe data void atau int
 - Memiliki nama main <br>
+
 Perintah Print : <br>
 ```cs
 void main() {
