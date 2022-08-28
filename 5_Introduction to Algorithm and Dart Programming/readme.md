@@ -118,3 +118,57 @@ void main() {
 ```
 
 #### 5. Operator
+- Digunakan untuk operasi pengolahan data
+- Data yang diolah disebut operand <br>
+
+Aritmatika ( + , - , * , / , % )
+```cs
+void main() {
+  print(1 + 1); // Penjumlahan
+  print(1 - 1); // Pengurangan
+  print(1 * 1); // Perkalian
+  print(1 / 1); // Pembagian
+  print(1 % 1); // Sisa Bagi
+}
+```
+
+Assignment ( = , += , -= , *= , /= , %= )
+```cs
+void main() {
+  var usia = 24.0;
+  usia = 23;
+  print(usia += 2);
+  print(usia -= 2);
+  print(usia %= 2);
+  print(usia /= 2);
+  print(usia *= 2);
+}
+```
+
+Comparison ( == , < , > , <= , >= )
+```cs
+void main() {
+  print(1 == 2);
+  print(1 <= 2);
+  print(1 <  2);
+  print(1 >= 2);
+  print(1 >  2);
+}
+```
+
+Logical ( && , || , ! )
+```cs
+void main() {
+  print(1 == 2 || 2 == 2);
+  print(2 == 2 || 2 == 2);
+  print(1 == 2 || 1 == 2);
+  print("===============");
+  print(1 == 2 && 2 == 2);
+  print(2 == 2 && 2 == 2);
+  print(1 == 2 && 1 == 2);
+  print("===============");
+
+  bool notTrue = !true; 
+  print(notTrue);
+}
+```
