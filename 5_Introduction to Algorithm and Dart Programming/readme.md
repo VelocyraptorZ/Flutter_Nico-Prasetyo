@@ -34,4 +34,25 @@ void main() {
   print("Hello World!");
 }
 ```
- 
+
+Fungsi Komentar 
+- Memeberi cacatan pada code
+- Mencegah perintah dijalan kan <br>
+
+Perintah Komentar 1: <br>
+```cs
+void main() {
+  // ini komentar  
+  print("Hello World!");
+}
+```
+
+Perintah Komentar 2: <br>
+```cs
+void main() {
+  /* 
+  ini komentar
+  */  
+  print("Hello World!");
+}
+```
