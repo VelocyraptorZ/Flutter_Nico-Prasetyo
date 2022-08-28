@@ -26,13 +26,11 @@ Program Dart Sederhana <br>
 Fungsi Main
 - Bagian yang dijalankan pertama kali
 - Tipe data void atau int
-- Memiliki nama main
+- Memiliki nama main <br>
 Perintah Print : <br>
-<div>
+```cs
 void main() {
-  double pi = 3.14;
-  int r = 10;
-  print(pi * r * r);
+  print("Hello World!");
 }
-</div>
+```cs
  
