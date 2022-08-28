@@ -22,8 +22,7 @@ Kelebihan Dart
 
 ### DASAR PEMROGRAMAN DART
 
-Program Dart Sederhana <br>
-Fungsi Main
+#### 1. Main
 - Bagian yang dijalankan pertama kali
 - Tipe data void atau int
 - Memiliki nama main <br>
@@ -35,7 +34,7 @@ void main() {
 }
 ```
 
-Fungsi Komentar 
+#### 2. Komentar 
 - Memeberi cacatan pada code
 - Mencegah perintah dijalan kan <br>
 
@@ -56,3 +55,66 @@ void main() {
   print("Hello World!");
 }
 ```
+
+#### 3. Variabel
+- Untuk menyimpan data
+- memiliki nama
+- memiliki tipe data
+
+Deklarasi Variabel : <br>
+Menggunakan var dan diikuti nama variabel secara otomatis tipe data variabel akan bernilai null,
+Menggunakan tanda " = " untuk memberi nilai pada variabel.
+```cs
+void main() {
+  var tahun;
+  tahun = 2022;
+}
+```
+
+Insiasi Variabel : <br>
+Deklarasi dan memberi nilai variabel secara bersamaan
+```cs
+void main() {
+  var tahun = 2022;  
+}
+```
+
+Konstanta : <br>
+Menggunakan final, diikuti nama, dan diberikan nilai (nilai tidak bisa diubah "nilai tetap")
+```cs
+void main() {
+  final tahun = 2022;  
+}
+```
+
+#### 4. Tipe Data
+- Jenis data yang dapat dikelola
+- Tipe data sederhana disebut primitive data type <br>
+
+Jenis Tipe Data
+- int (bilangan bulat)
+```cs
+void main() {
+  int umur = 20;  
+}
+```
+- double (bilangan pecahan "decimal")
+```cs
+void main() {
+  double tinggi = 10.5;  
+}
+```
+- bool (true/false)
+```cs
+void main() {
+  bool wanita = false;  
+}
+```
+- String (text)
+```cs
+void main() {
+  String nama = 'Nico';  
+}
+```
+
+#### 5. Operator
