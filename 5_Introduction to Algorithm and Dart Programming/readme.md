@@ -32,5 +32,5 @@ Perintah Print : <br>
 void main() {
   print("Hello World!");
 }
-```cs
+```
  
