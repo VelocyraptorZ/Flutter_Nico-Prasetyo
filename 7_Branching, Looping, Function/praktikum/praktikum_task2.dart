@@ -3,18 +3,19 @@ void main() {
   double kedua = 20;
   double ketiga = 30;
 
-  double result1 = faktorial(pertama);
-  double result2 = faktorial(kedua);
-  double result3 = faktorial(ketiga);
+  double hasil1 = faktorial(pertama);
+  double hasil2 = faktorial(kedua);
+  double hasil3 = faktorial(ketiga);
 
-  print('Faktorial  $pertama = $result1');
-  print('Faktorial  $kedua = $result2');
-  print('Faktorial  $ketiga = $result3');
+  print('Faktorial  $pertama = $hasil1');
+  print('Faktorial  $kedua = $hasil2');
+  print('Faktorial  $ketiga = $hasil3');
 }
 
 double faktorial(double n) {
   return n == 1 ? 1 : n * faktorial(n - 1);
 }
+
 
 // import 'dart:io';
 
