@@ -7,8 +7,11 @@ Letakkan solusi dari persoalan berikut dalam masing masing fungsi
 - jika nilai > 0 : return C
 - selain itu return teks kosong
 
+![](../screenshots/Screenshot_Task%20Praktikum%201.png)
 
 2. Tampilkan nilai faktorial dari
 - 10
 - 20
 - 30
+
+![](../screenshots/Screenshot_Task%20Praktikum%202.png)
