@@ -6,6 +6,9 @@ void main() {
   // print(nilai(score));
 
   print(nilai(80));
+  print(nilai(50));
+  print(nilai(10));
+  print(nilai(0));
 }
 
 String nilai(int score) {
