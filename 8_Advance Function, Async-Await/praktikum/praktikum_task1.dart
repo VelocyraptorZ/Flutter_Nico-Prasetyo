@@ -24,9 +24,13 @@ void main() async {
 
   List hasilkali = kali(data, pengali, hasil);
 
-  for (int i = 0; i < 5; i += 1) {
-    print('Hasil ${(data[i])} x $pengali = ${(hasilkali[i])}');
-  }
+  print(data);
+
+  await Future.delayed(Duration(seconds: 1), () {
+    for (int i = 0; i < 5; i += 1) {
+      print('Hasil ${(data[i])} x $pengali = ${(hasilkali[i])}');
+    }
+  });
 }
 
 List kali(List data, int pengali, List hasil) {
