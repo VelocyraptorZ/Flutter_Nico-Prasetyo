@@ -4,5 +4,5 @@ void main() {
 
   List<String> sports = ['cricket', 'football', 'tennis', 'baseball'];
   Map<int, String> map = sports.asMap();
-  print(map); // {0: cricket, 1: football, 2: tennis, 3: baseball}
+  print(map);
 }
