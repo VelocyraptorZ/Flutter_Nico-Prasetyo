@@ -26,7 +26,7 @@ void main() async {
 
   print(data);
 
-  await Future.delayed(Duration(seconds: 1), () {
+  await Future.delayed(Duration(seconds: 2), () {
     for (int i = 0; i < 5; i += 1) {
       print('Hasil ${(data[i])} x $pengali = ${(hasilkali[i])}');
     }
