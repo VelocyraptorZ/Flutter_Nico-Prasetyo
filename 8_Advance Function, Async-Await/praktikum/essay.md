@@ -11,4 +11,4 @@ a. tiap element-nya berupa list juga, <br>
 b. tiap element wajib terdapat 2 data (sub-element). <br>
 Buatlah sebuah Map dengan menggunakan list tersebut! <br>
 
-![](../screenshots/Screenshot_praktikum_task2.png)
+![](../screenshots/Screenshot_praktikum_task2.png)  
