@@ -1,6 +1,5 @@
 class Hewan {
   int beratSapi = 70;
-  int beratKambing = 80;
 }
 
 class Mobil {
@@ -11,10 +10,6 @@ class Mobil {
   void tambahMuatan() {
     if (h1.beratSapi <= kapasitas) {
       muatan.add(h1.beratSapi);
-    } else if (h1.beratKambing <= kapasitas) {
-      muatan.add(h1.beratKambing);
-    } else {
-      muatan.add(0);
     }
   }
 }
