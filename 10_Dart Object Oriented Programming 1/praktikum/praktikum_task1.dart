@@ -1,22 +1,29 @@
 class Hewan {
-  int berat = 10;
+  int beratSapi = 70;
+  int beratKambing = 80;
 }
 
 class Mobil {
-  int kapasitas = 100;
-  List<String> muatan = ['Sapi', 'Kambing'];
+  var h1 = Hewan();
+  int kapasitas = 1000;
+  List<int> muatan = [];
 
-  void tambahMuatan(int berat, int kapasitas) {
-    if (berat <= kapasitas) {
-      print('masukan muatan');
+  void tambahMuatan() {
+    if (h1.beratSapi <= kapasitas) {
+      muatan.add(h1.beratSapi);
+    } else if (h1.beratKambing <= kapasitas) {
+      muatan.add(h1.beratKambing);
+    } else {
+      muatan.add(0);
     }
   }
 }
 
-void main(List<String> args) {
-  var h1 = Hewan();
-  var h2 = Mobil();
+void main() {
+  var result = Mobil();
 
-  print(h1);
-  print(h2);
+  result.tambahMuatan();
+
+  print('Kapasitas Muatan = ${result.kapasitas}');
+  print('Isi Muatan = ${result.muatan}');
 }
