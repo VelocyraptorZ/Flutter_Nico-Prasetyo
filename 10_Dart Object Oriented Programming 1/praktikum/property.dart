@@ -5,9 +5,7 @@ class Hewan {
 
 void main() {
   var h1 = Hewan();
-  var h2 = Hewan();
-  var h3 = Hewan();
 
   print(h1.mata);
-  print(h2.kaki);
+  print(h1.kaki);
 }
