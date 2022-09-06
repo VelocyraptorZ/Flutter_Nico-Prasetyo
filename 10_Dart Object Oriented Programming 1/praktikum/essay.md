@@ -7,6 +7,8 @@
 |                 | Method tambahMuatan|
 
 2. Pada class Mobil, tambahkan method totalMuatan untuk menghitung total Muatan yang diangkut oleh mobil tersebut!  
+
+# HASIL PRAKTIKUM TASK 1 dan 2 SECTION 10
                 
 
 
