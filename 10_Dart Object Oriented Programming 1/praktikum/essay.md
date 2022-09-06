@@ -6,7 +6,11 @@
 |                 | Property Muatan    |
 |                 | Method tambahMuatan|
 
+![](../screenshots/Screenshot_Task1.png)
+
 2. Pada class Mobil, tambahkan method totalMuatan untuk menghitung total Muatan yang diangkut oleh mobil tersebut!  
+
+![](../screenshots/Screenshot_Task2.png)
 
 #### HASIL PRAKTIKUM TASK 1 dan 2 SECTION 10
                 
