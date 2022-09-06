@@ -3,9 +3,9 @@
 | Class Hewan     |           | Class Mobil        |
 |-----------------|           |--------------------|
 | Property Berat  |           | Property Kapasitas |
-                              |--------------------| 
-                              | Property Muatan    |
-                              |--------------------|
-                              | Method tambahMuatan|
+|                 |           |--------------------| 
+|                 |           | Property Muatan    |
+|                 |           |--------------------|
+|                 |           | Method tambahMuatan|
 
 
