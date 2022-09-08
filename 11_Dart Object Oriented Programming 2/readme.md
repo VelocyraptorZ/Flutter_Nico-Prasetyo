@@ -94,7 +94,7 @@ void main() {
 - Menunjukkan method apa saja yang ada pada suatu class 
 - Seluruh method wajib di-override
 - Digunakan dengan menggunakan implements 
-####
+#### Menggunakan Interface
 - Sekilas mirip inheritance
 - Pada class yang melakukan implements, wajib melakukan override semua method yang ada pada class induk
 
