@@ -35,8 +35,8 @@ class balok extends bangunRuang {
 void main() {
   var b1 = balok();
   var k1 = kubus();
-  var r1 = bangunRuang();
-  r1.volume;
+  var bangun = bangunRuang();
+  bangun.volume;
 
   print("Sisi Kubus = ${k1.sisi1}");
   print("Volume Kubus = ${k1.volume(k1.sisi1!, k1.sisi2!, k1.sisi3!)}");
@@ -46,5 +46,5 @@ void main() {
   print("Panjang Balok = ${b1.panjang}");
   print("Lebar Balok   = ${b1.lebar}");
   print("Tinggi Balok  = ${b1.tinggi}");
-  print("Volume Balok  = ${r1.volume(b1.panjang!, b1.lebar!, b1.tinggi!)}");
+  print("Volume Balok  = ${bangun.volume(b1.panjang!, b1.lebar!, b1.tinggi!)}");
 }
