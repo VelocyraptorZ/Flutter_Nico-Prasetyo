@@ -83,7 +83,7 @@ void main() {
   print(
       "Faktor Pesekutuan Terbesar (${fpb.x},${fpb.y}) = ${operational.hasil(fpb.x!, fpb.y!)}");
 
-  print("============================");
+  print("=============================");
 
   print("Bilangan x = ${kpk.x}");
   print("Bilangan y = ${kpk.y}");
