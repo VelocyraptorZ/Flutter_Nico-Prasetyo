@@ -7,6 +7,8 @@
 | tinggi       |
 | volume()     |
 
+![](../screenshots/Screenshot_TaskPraktikumNo1.png)
+
 2. Dari rangkaian class di atas, lakukan method overriding untuk membedakan tiap proses dalam method antar class! Sehingga dapat melengkapi kode berikut!
 
 ```cs
@@ -16,12 +18,16 @@ void main() {
 }
 ```
 
+![](../screenshots/Screenshot_TaskPraktikumNo2.png)
+
 3. Buatlah beberapa class dengan spesifikasi berikut!
 
 | Matematika   | KelipatanPersekutuanTerkecil implements Matematika | FaktorPersekutuanTerbesar implements Matematika |
 |--------------|----------------------------------------------------|-------------------------------------------------|
 | hasil()      | x                                                  | x                                               |
 |              | y                                                  | y                                               |
+
+![](../screenshots/Screenshot_TaskPraktikumNo3.png)
 
 4. Dari rangkaian class di atas, lengkapi kode berikut ini! Sehingga dapat menampilka hasil pada layar.
 
@@ -31,3 +37,5 @@ void main() {
     print(operatinal.hasil());
 }
 ```
+
+![](../screenshots/Screenshot_TaskPraktikumNo4.png)
