@@ -1,8 +1,8 @@
 1. Buatlah beberapa class dengan spesifikasi berikut!
 
-| Bangun Ruang | Kubus extends Bangun Ruang | Balok extend Bangun Ruang |
-|--------------|----------------------------|---------------------------|
-| panjang      | sisi                       |                           |
+| Bangun Ruang | Kubus extends Bangun Ruang | Balok extends Bangun Ruang |
+|--------------|----------------------------|----------------------------|
+| panjang      | sisi                       |                            |
 | lebar        | 
 | tinggi       |
 | volume()     |
