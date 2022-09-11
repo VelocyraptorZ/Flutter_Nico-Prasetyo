@@ -34,7 +34,7 @@ void main() {
 ```cs
 void main() {
     //lengkapi di sini
-    print(operatinal.hasil());
+    print(operational.hasil());
 }
 ```
 
