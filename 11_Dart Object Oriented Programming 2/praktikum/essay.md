@@ -29,7 +29,7 @@ void main() {
 
 ![](../screenshots/Screenshot_TaskPraktikumNo3.png)
 
-4. Dari rangkaian class di atas, lengkapi kode berikut ini! Sehingga dapat menampilka hasil pada layar.
+4. Dari rangkaian class di atas, lengkapi kode berikut ini! Sehingga dapat menampilkan hasil pada layar.
 
 ```cs
 void main() {
