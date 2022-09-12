@@ -91,7 +91,7 @@ const Scaffold(
 ```
 
 #### AppBar
-- Memebentuk application bar yang terletak pada bagian atas halaman.
+- Membentuk application bar yang terletak pada bagian atas halaman.
 ```cs
 AppBar(
     title: const Text('Home'), 
