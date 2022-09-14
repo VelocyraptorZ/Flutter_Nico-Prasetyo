@@ -62,6 +62,10 @@ class _CountdownPageState extends State<CountdownPage>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text('Task Praktikum Section 12'),
+        centerTitle: true,
+      ),
       backgroundColor: Color(0xfff5fbff),
       body: Column(
         children: [
