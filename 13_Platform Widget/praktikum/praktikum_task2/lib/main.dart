@@ -45,7 +45,7 @@ class _ChatsState extends State<Chats> {
             name: "Pink Guy",
             time: "12:00 PM",
             desc: "Heyy Bous!",
-            message: " 2 ",
+            message: "2",
             isRead: true),
         const Divider(height: 0.2),
         list(
@@ -53,7 +53,7 @@ class _ChatsState extends State<Chats> {
             name: "Snoop Dogg",
             time: "8:30 PM",
             desc: "Smoke Weed Everyday",
-            message: " 2 ",
+            message: "2",
             isRead: false),
         const Divider(height: 0.2),
         list(
@@ -61,7 +61,7 @@ class _ChatsState extends State<Chats> {
             name: "Bjorka",
             time: "05:30 PM",
             desc: "Sir, This is all Indonesian government data ",
-            message: " 2 ",
+            message: "2",
             isRead: false),
         const Divider(height: 0.2),
         list(
@@ -69,7 +69,7 @@ class _ChatsState extends State<Chats> {
             name: "Kim Jong-un",
             time: "12:00 AM",
             desc: "Wait for me, will show you the real NUKE! ",
-            message: " 5 ",
+            message: "5",
             isRead: true),
         const Divider(height: 0.2),
         list(
@@ -77,7 +77,7 @@ class _ChatsState extends State<Chats> {
             name: "Snoop Dogg",
             time: "09:30 PM",
             desc: "Typing...",
-            message: " 2 ",
+            message: "2",
             isRead: false),
         const Divider(height: 0.2),
       ],
@@ -125,16 +125,20 @@ class _ChatsState extends State<Chats> {
             ),
             Container(
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(30),
+                shape: BoxShape.circle,
+                // borderRadius: BorderRadius.circular(30),
                 // border: Border.all(width: 1),
                 color: isRead ? Colors.green : Colors.white,
               ),
-              child: Text(
-                message,
-                style: const TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 16),
+              child: Padding(
+                padding: const EdgeInsets.all(7),
+                child: Text(
+                  message,
+                  style: const TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 16),
+                ),
               ),
             )
           ],
