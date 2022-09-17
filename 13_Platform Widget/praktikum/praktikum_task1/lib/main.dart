@@ -91,7 +91,7 @@ class _HomeState extends State<Home> {
           const Divider(height: 0.2),
           list(
               url: 'assets/Trump.png',
-              name: "Snoop Dogg",
+              name: "Donald Trump",
               time: "09:30 PM",
               desc: "Typing...",
               message: " 2 ",
