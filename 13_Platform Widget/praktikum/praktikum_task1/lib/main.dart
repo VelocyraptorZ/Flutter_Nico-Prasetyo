@@ -86,7 +86,7 @@ class _HomeState extends State<Home> {
               name: "Kim Jong-un",
               time: "12:00 AM",
               desc: "Wait for me, will show you the real NUKE! ",
-              message: " 5 ",
+              message: " 50 ",
               isRead: true),
           const Divider(height: 0.2),
           list(
@@ -143,10 +143,13 @@ class _HomeState extends State<Home> {
             ),
             Container(
               decoration: BoxDecoration(
+                // shape: BoxShape.circle,
                 borderRadius: BorderRadius.circular(30),
                 // border: Border.all(width: 1),
                 color: isRead ? Colors.green : Colors.white,
               ),
+              // child: Padding(
+              // padding: const EdgeInsets.all(4),
               child: Text(
                 message,
                 style: const TextStyle(
@@ -154,6 +157,7 @@ class _HomeState extends State<Home> {
                     fontWeight: FontWeight.bold,
                     fontSize: 16),
               ),
+              // ),
             )
           ],
         ),
