@@ -23,9 +23,15 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  void _edit() {}
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        onPressed: _edit,
+        child: const Icon(Icons.edit),
+      ),
       drawer: const DrawerScreen(),
       appBar: AppBar(
         elevation: 0.0,
