@@ -218,7 +218,7 @@ class AllChats extends StatelessWidget {
       ChatUsers(
           name: "Pink Guy",
           desc: "Hey Bous!",
-          url: "praktikum_task2/assets/PinkGuy.png",
+          url: "assets/PinkGuy.png",
           time: "12:00 PM",
           messages: " 5 ",
           isRead: false),
