@@ -36,8 +36,7 @@ class MyApp extends StatelessWidget {
           // ignore: prefer_const_literals_to_create_immutables
           children: [
             const Padding(
-                padding:
-                    EdgeInsets.only(top: 65, right: 15, left: 15, bottom: 20),
+                padding: EdgeInsets.only(top: 85, right: 15, left: 15),
                 child: CupertinoSearchTextField()),
             const Expanded(
               child: CupertinoTabBarExample(),
@@ -140,9 +139,8 @@ class _ConversationListState extends State<ConversationList> {
               child: Row(
                 children: <Widget>[
                   CircleAvatar(
+                    radius: 30,
                     backgroundImage: ExactAssetImage(widget.url),
-                    backgroundColor: CupertinoColors.white,
-                    maxRadius: 30,
                   ),
                   const SizedBox(
                     width: 16,
@@ -220,7 +218,7 @@ class AllChats extends StatelessWidget {
           desc: "Hey Bous!",
           url: "assets/PinkGuy.png",
           time: "12:00 PM",
-          messages: " 5 ",
+          messages: ' 5 ',
           isRead: false),
       ChatUsers(
           name: "Pink Guy",
