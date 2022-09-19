@@ -36,7 +36,7 @@ class MyApp extends StatelessWidget {
           // ignore: prefer_const_literals_to_create_immutables
           children: [
             const Padding(
-                padding: EdgeInsets.only(top: 85, right: 15, left: 15),
+                padding: EdgeInsets.only(top: 65, right: 15, left: 15),
                 child: CupertinoSearchTextField()),
             const Expanded(
               child: CupertinoTabBarExample(),
@@ -86,7 +86,7 @@ class CupertinoTabBarExample extends StatelessWidget {
   }
 }
 
-class ChatUsers {
+class User {
   String name;
   String desc;
   String url;
@@ -94,7 +94,7 @@ class ChatUsers {
   String messages;
   bool isRead;
 
-  ChatUsers(
+  User(
       {required this.name,
       required this.desc,
       required this.url,
@@ -104,7 +104,7 @@ class ChatUsers {
 }
 
 // ignore: must_be_immutable
-class ConversationList extends StatefulWidget {
+class Chat extends StatefulWidget {
   String name;
   String desc;
   String url;
@@ -112,7 +112,7 @@ class ConversationList extends StatefulWidget {
   String messages;
   bool isRead;
 
-  ConversationList({
+  Chat({
     super.key,
     required this.name,
     required this.desc,
@@ -122,10 +122,10 @@ class ConversationList extends StatefulWidget {
     required this.messages,
   });
   @override
-  State<ConversationList> createState() => _ConversationListState();
+  State<Chat> createState() => _ChatState();
 }
 
-class _ConversationListState extends State<ConversationList> {
+class _ChatState extends State<Chat> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -212,50 +212,50 @@ class AllChats extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<ChatUsers> chatUsers = [
-      ChatUsers(
+    List<User> users = [
+      User(
           name: "Pink Guy",
           desc: "Hey Bous!",
           url: "assets/PinkGuy.png",
           time: "12:00 PM",
           messages: ' 5 ',
           isRead: false),
-      ChatUsers(
+      User(
           name: "Pink Guy",
           desc: "Hey Bous!",
           url: "assets/PinkGuy.png",
           time: "12:00 PM",
           messages: " 5 ",
           isRead: true),
-      ChatUsers(
+      User(
           name: "Pink Guy",
           desc: "Hey Bous!",
           url: "assets/PinkGuy.png",
           time: "12:00 PM",
           messages: " 5 ",
           isRead: false),
-      ChatUsers(
+      User(
           name: "Pink Guy",
           desc: "Hey Bous!",
           url: "assets/PinkGuy.png",
           time: "12:00 PM",
           messages: " 5 ",
           isRead: true),
-      ChatUsers(
+      User(
           name: "Pink Guy",
           desc: "Hey Bous!",
           url: "assets/PinkGuy.png",
           time: "12:00 PM",
           messages: " 5 ",
           isRead: false),
-      ChatUsers(
+      User(
           name: "Pink Guy",
           desc: "Hey Bous!",
           url: "assets/PinkGuy.png",
           time: "12:00 PM",
           messages: " 5 ",
           isRead: true),
-      ChatUsers(
+      User(
           name: "Pink Guy",
           desc: "Hey Bous!",
           url: "assets/PinkGuy.png",
@@ -265,173 +265,22 @@ class AllChats extends StatelessWidget {
     ];
 
     return CupertinoPageScaffold(
-        child: SingleChildScrollView(
       child: ListView.builder(
-        itemCount: chatUsers.length,
+        itemCount: users.length,
         shrinkWrap: true,
         padding: const EdgeInsets.only(top: 16),
         physics: const NeverScrollableScrollPhysics(),
         itemBuilder: (context, index) {
-          return ConversationList(
-            name: chatUsers[index].name,
-            desc: chatUsers[index].desc,
-            url: chatUsers[index].url,
-            time: chatUsers[index].time,
-            isRead: (chatUsers[index].messages == '0') ? true : false,
-            messages: chatUsers[index].messages,
+          return Chat(
+            name: users[index].name,
+            desc: users[index].desc,
+            url: users[index].url,
+            time: users[index].time,
+            isRead: (users[index].messages == '0') ? true : false,
+            messages: users[index].messages,
           );
         },
       ),
-    ));
+    );
   }
 }
-
-// class Chats extends StatefulWidget {
-//   const Chats({Key? key}) : super(key: key);
-
-//   @override
-//   State<Chats> createState() => _ChatsState();
-// }
-
-// class _ChatsState extends State<Chats> {
-//   @override
-//   Widget build(BuildContext context) {
-//     return CupertinoPageScaffold(
-//         child: Column(
-//       children: [
-//         list(
-//             url: 'assets/PinkGuy.png',
-//             name: "Pink Guy",
-//             time: "12:00 PM",
-//             desc: "Heyy Bous!",
-//             message: " 2 ",
-//             isRead: true),
-//         const Divider(height: 0.2),
-//         list(
-//             url: 'assets/Snoop.png',
-//             name: "Snoop Dogg",
-//             time: "8:30 PM",
-//             desc: "Smoke Weed Everyday",
-//             message: " 2 ",
-//             isRead: false),
-//         const Divider(height: 0.2),
-//         list(
-//             url: 'assets/Bjorka.png',
-//             name: "Bjorka",
-//             time: "05:30 PM",
-//             desc: "Sir, This is all Indonesian government data ",
-//             message: " 2 ",
-//             isRead: false),
-//         const Divider(height: 0.2),
-//         list(
-//             url: 'assets/KimJongUn.png',
-//             name: "Kim Jong-un",
-//             time: "12:00 AM",
-//             desc: "Wait for me, will show you the real NUKE! ",
-//             message: " 5 ",
-//             isRead: true),
-//         const Divider(height: 0.2),
-//         list(
-//             url: 'assets/Trump.png',
-//             name: "Snoop Dogg",
-//             time: "09:30 PM",
-//             desc: "Typing...",
-//             message: " 2 ",
-//             isRead: false),
-//         const Divider(height: 0.2),
-//       ],
-//     ));
-//   }
-
-//   ListView list({
-//     required String url,
-//     required String name,
-//     required String time,
-//     required String desc,
-//     required String message,
-//     required bool isRead,
-//   }) {
-//     return ListView.builder(itemBuilder: (BuildContext context, int index) {
-//       return Container(
-//         padding:
-//             const EdgeInsets.only(left: 16, right: 16, top: 10, bottom: 10),
-//         child: Row(
-//           children: <Widget>[
-//             Expanded(
-//               child: Row(
-//                 children: <Widget>[
-//                   CircleAvatar(
-//                     backgroundImage: ExactAssetImage(url),
-//                     backgroundColor: CupertinoColors.white,
-//                     maxRadius: 30,
-//                   ),
-//                   const SizedBox(
-//                     width: 16,
-//                   ),
-//                   Expanded(
-//                     child: Container(
-//                       color: CupertinoColors.white,
-//                       child: Column(
-//                         crossAxisAlignment: CrossAxisAlignment.start,
-//                         children: <Widget>[
-//                           Text(
-//                             name,
-//                             style: const TextStyle(fontSize: 16),
-//                           ),
-//                           const SizedBox(
-//                             height: 6,
-//                           ),
-//                           Text(
-//                             desc,
-//                             style: TextStyle(
-//                                 fontSize: 13,
-//                                 color: CupertinoColors.systemGrey,
-//                                 fontWeight: isRead
-//                                     ? FontWeight.normal
-//                                     : FontWeight.bold),
-//                           ),
-//                         ],
-//                       ),
-//                     ),
-//                   ),
-//                 ],
-//               ),
-//             ),
-//             Column(
-//               crossAxisAlignment: CrossAxisAlignment.end,
-//               children: [
-//                 Row(
-//                   children: [
-//                     Text(
-//                       time,
-//                       // ignore: prefer_const_constructors
-//                       style: TextStyle(fontSize: 12),
-//                     ),
-//                   ],
-//                 ),
-//                 Container(
-//                   decoration: BoxDecoration(
-//                     // shape: BoxShape.circle,
-//                     borderRadius: BorderRadius.circular(30),
-//                     // border: Border.all(width: 1),
-//                     color: isRead ? Colors.green : Colors.white,
-//                   ),
-//                   child: Padding(
-//                     padding: const EdgeInsets.all(
-//                         7), //apply padding to all four sides
-//                     child: Text(
-//                       message,
-//                       style: const TextStyle(
-//                         color: CupertinoColors.white,
-//                       ),
-//                     ),
-//                   ),
-//                 ),
-//               ],
-//             ),
-//           ],
-//         ),
-//       );
-//     });
-//   }
-// }
