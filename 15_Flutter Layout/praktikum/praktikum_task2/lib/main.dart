@@ -12,18 +12,21 @@ class MyApp extends StatelessWidget {
     const title = "GridView";
 
     return MaterialApp(
-        title: title,
-        home: Scaffold(
-            appBar: AppBar(
-              title: const Text(title),
-            ),
-            body: GridView.count(
-                crossAxisCount: 4,
-                children: List.generate(iconics.length, (index) {
-                  return Center(
-                    child: IconicCircle(iconic: iconics[index]),
-                  );
-                }))));
+      title: title,
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text(title),
+        ),
+        body: GridView.count(
+          crossAxisCount: 4,
+          children: List.generate(iconics.length, (index) {
+            return Center(
+              child: IconicCircle(iconic: iconics[index]),
+            );
+          }),
+        ),
+      ),
+    );
   }
 }
 
@@ -72,10 +75,11 @@ class IconicCircle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CircleAvatar(
-        child: Center(
-      child: Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
-        Expanded(child: Icon(iconic.icon, size: 20.0, color: Colors.white)),
-      ]),
-    ));
+      child: Center(
+        child: Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
+          Expanded(child: Icon(iconic.icon, size: 20.0, color: Colors.white)),
+        ]),
+      ),
+    );
   }
 }
