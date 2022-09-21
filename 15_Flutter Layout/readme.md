@@ -26,8 +26,7 @@ Container(
         border: Border.all(),
         ),
       child: const Text('Hello'),  
-    ),
-);
+    );
 ```
 
 #### Center
