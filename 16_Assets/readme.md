@@ -64,7 +64,7 @@ Cari dan Download Font (https://fonts.google.com/)
 Import file .ttf yang sudah didownload dan masukkan pada Daftar font pubspec.yaml
 ![](screenshots/Screenshot_Summarypic5.png)
 - Step 3 <br>
-Mengatur dont sebagai default <br>
+Mengatur font sebagai default <br>
 ![](screenshots/Screenshot_Summarypic6.png)
 - Step 4 <br>
 Gunakan font dispesifik widget <br>
