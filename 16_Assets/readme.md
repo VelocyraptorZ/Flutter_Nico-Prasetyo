@@ -57,6 +57,26 @@ body: Column(
 - Penentuan font yang mau dipakai biasanya oleh UI Designer
 - Penerapan font menggunakan custom font atau dari package 
 
+#### Cara Menggunakan Custom Font
+- Step 1 <br>
+Cari dan Download Font (https://fonts.google.com/)
+- Step 2 <br>
+Import file .ttf yang sudah didownload dan masukkan pada Daftar font pubspec.yaml
+![](screenshots/Screenshot_Summarypic5.png)
+- Step 3 <br>
+Mengatur dont sebagai default <br>
+![](screenshots/Screenshot_Summarypic6.png)
+- Step 4 <br>
+Gunakan font dispesifik widget <br>
+![](screenshots/Screenshot_Summarypic7.png)
+
+#### Cara Menggunakan Font dari Package
+- Step 1 <br>
+Tambahkan package google_fonts didependencies atau search dari pub.dev
+- Step 2 <br>
+Import package pada file dart lalu gunakan font dengan memanggil GoogleFonts.namaFont() <br>
+![](screenshots/Screenshot_Summarypic8.png)
+
 ### Aplikasi Task Management(Continue)
 - Menambahkan image pada empty_task_screen.dart
 ![](screenshots/Screenshot_Summarypic1.png)
@@ -64,7 +84,7 @@ body: Column(
 - Membuat Profile Picture di profile_sheet.dart, menggunakan widget CircleAvatar
 ![](screenshots/Screenshot_Summarypic2.png)
 
-- Membuat font pada setiap text
+- Membuat font pada setiap text 
 ![](screenshots/Screenshot_Summarypic3.png)
 
 - Menambahkan konten
