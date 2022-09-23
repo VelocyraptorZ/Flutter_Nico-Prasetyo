@@ -87,5 +87,5 @@ Import package pada file dart lalu gunakan font dengan memanggil GoogleFonts.nam
 - Membuat font pada setiap text 
 ![](screenshots/Screenshot_Summarypic3.png)
 
-- Menambahkan konten
+- Menambahkan konten <br>
 ![](screenshots/Screenshot_Summarypic4.png)
