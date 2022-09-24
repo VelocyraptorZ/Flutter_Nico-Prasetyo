@@ -12,12 +12,25 @@ class _FormSheetState extends State<FormSheet> {
 
   // ignore: non_constant_identifier_names
   TextEditingController FirstName = TextEditingController();
+  String firstName = '';
   // ignore: non_constant_identifier_names
   TextEditingController LastName = TextEditingController();
+  String lastName = '';
   // ignore: non_constant_identifier_names
   TextEditingController Email = TextEditingController();
+  String email = '';
   // ignore: non_constant_identifier_names
   TextEditingController Problem = TextEditingController();
+  String problem = '';
+
+  void setText() {
+    setState(() {
+      firstName = FirstName.text;
+      lastName = LastName.text;
+      email = Email.text;
+      problem = Problem.text;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -65,7 +78,7 @@ class _FormSheetState extends State<FormSheet> {
                             ),
                             validator: (value) {
                               if (value!.isEmpty) {
-                                return 'Nama tidak boleh kosong';
+                                return 'Nama Depan tidak boleh kosong';
                               }
                               return null;
                             },
@@ -91,7 +104,7 @@ class _FormSheetState extends State<FormSheet> {
                             ),
                             validator: (value) {
                               if (value!.isEmpty) {
-                                return 'Nama tidak boleh kosong';
+                                return 'Nama Belakang tidak boleh kosong';
                               }
                               return null;
                             },
@@ -133,7 +146,7 @@ class _FormSheetState extends State<FormSheet> {
                             ),
                             validator: (value) {
                               if (value!.isEmpty) {
-                                return 'Nama tidak boleh kosong';
+                                return 'Email tidak boleh kosong';
                               }
                               return null;
                             },
@@ -177,7 +190,7 @@ class _FormSheetState extends State<FormSheet> {
                             ),
                             validator: (value) {
                               if (value!.isEmpty) {
-                                return 'Nama tidak boleh kosong';
+                                return 'Isi tidak boleh kosong';
                               }
                               return null;
                             },
@@ -201,6 +214,7 @@ class _FormSheetState extends State<FormSheet> {
                   ),
                   onPressed: () {
                     if (_formKey.currentState!.validate()) {
+                      setText();
                       showDialog<String>(
                         context: context,
                         builder: (context) => AlertDialog(
@@ -209,19 +223,23 @@ class _FormSheetState extends State<FormSheet> {
                             crossAxisAlignment: CrossAxisAlignment.stretch,
                             mainAxisSize: MainAxisSize.min,
                             children: [
-                              Text('Name : ${FirstName.text} ${LastName.text}'),
-                              Text('Email : ${Email.text}'),
-                              Text('Your Problem : ${Problem.text}'),
+                              Text('Name : $firstName $lastName'),
+                              Text('Email : $email'),
+                              Text('Your Problem : $problem'),
                             ],
                           ),
                           actions: [
                             ElevatedButton(
                               onPressed: () => Navigator.pop(context, 'OK'),
                               child: const Text('OK'),
-                            )
+                            ),
                           ],
                         ),
                       );
+                      FirstName.clear();
+                      LastName.clear();
+                      Email.clear();
+                      Problem.clear();
                     }
                   },
                 ),
