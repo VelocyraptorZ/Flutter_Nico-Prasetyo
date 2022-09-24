@@ -16,7 +16,7 @@ a. Text atau logo dari aplikasi kalian <br>
 #### Project 2
 
 1. Masih pada halaman yang sama. Jika dilakukan scroll makan akan terdapat welcome section halaman kalian. Dan buatlah beberapa hal <br>
-a. Welcome section (terdapat gambar dan kata-kata yang menarik user)
+a. Welcome section (terdapat gambar dan kata-kata yang menarik user) <br>
 
 ![](../screenshots/Screenshot_WeeklyTaskWelcome.png)
 
