@@ -18,8 +18,14 @@ a. Text atau logo dari aplikasi kalian <br>
 1. Masih pada halaman yang sama. Jika dilakukan scroll makan akan terdapat welcome section halaman kalian. Dan buatlah beberapa hal <br>
 a. Welcome section (terdapat gambar dan kata-kata yang menarik user)
 
+![](../screenshots/Screenshot_WeeklyTaskWelcome.png)
+
 2. Masih pada halaman yang sama. Jika dilakukan scroll makan akan terdapat section
 contact us dengan kriteria dari aplikasi adalah sebagai berikut <br>
+![](../screenshots/Screenshot_WeeklyTaskContactUs.png) <br>
 a. Memiliki 3 buat form(username bertime text, email bertime email, message bertipe text area) <br>
+![](../screenshots/Screenshot_WeeklyTaskForm.png)<br>
 b. Memiliki button submit. <br>
-c. (optional) jika kita menekan tombol submit maka keluar alert yang berisikan data yang kita masukkan pada form
+![](../screenshots/Screenshot_WeeklyTaskInput.png)<br>
+c. (optional) jika kita menekan tombol submit maka keluar alert yang berisikan data yang kita masukkan pada form <br>
+![](../screenshots/Screenshot_WeeklyTaskShowAlert.png)
