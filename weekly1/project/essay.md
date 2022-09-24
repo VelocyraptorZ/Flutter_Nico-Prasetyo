@@ -6,8 +6,12 @@
 a. Buat folder project yang berisikan kode yang kalian buat <br>
 b. Buat folder screenshot dan masukkan hasil dari kode yang kalian buat <br>
 
+![](../screenshots/Screenshot_WeeklyTaskFolder.png)
+
 2. Buatlah header pada application kalian dengan memiliki <br>
-a. Text atau logo dari aplikasi kalian
+a. Text atau logo dari aplikasi kalian <br>
+
+![](../screenshots/Screenshot_WeeklyTaskLogo.png)
 
 #### Project 2
 
