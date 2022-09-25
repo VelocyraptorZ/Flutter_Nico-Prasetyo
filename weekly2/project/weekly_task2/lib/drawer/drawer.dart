@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:weekly_task2/screen/aboutus_screen.dart';
 
 class DrawerScreen extends StatefulWidget {
   const DrawerScreen({Key? key}) : super(key: key);
@@ -33,7 +34,14 @@ class _DrawerScreenState extends State<DrawerScreen> {
           DrawerListTile(
             iconData: Icons.info_outlined,
             title: 'About Us',
-            onTilePressed: () {},
+            onTilePressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const AboutUs(),
+                ),
+              );
+            },
           ),
           DrawerListTile(
             iconData: Icons.login_outlined,
