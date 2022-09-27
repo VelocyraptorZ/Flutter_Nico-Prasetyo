@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:uuid/uuid.dart';
 import '../models/contact_model.dart';
@@ -101,6 +102,9 @@ class _ContactItemScreenState extends State<ContactItemScreen> {
         TextField(
           controller: _contactNumberController,
           cursorColor: Colors.black,
+          inputFormatters: <TextInputFormatter>[
+            FilteringTextInputFormatter.digitsOnly
+          ],
           decoration: const InputDecoration(
             hintText: 'Input Contact Number',
             enabledBorder: OutlineInputBorder(

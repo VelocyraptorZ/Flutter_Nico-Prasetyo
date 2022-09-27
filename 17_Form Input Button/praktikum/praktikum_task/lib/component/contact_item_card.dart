@@ -26,7 +26,7 @@ class ContactItemCard extends StatelessWidget {
             Colors.primaries[_random.nextInt(Colors.primaries.length)]
                 [_random.nextInt(9) * 100],
         child: Padding(
-          padding: const EdgeInsets.only(bottom: 2),
+          padding: const EdgeInsets.all(0),
           child: Text(
             contact.contactName.split('').first,
             style: const TextStyle(color: Colors.white),

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:praktikum_task/screens/contact_screen.dart';
 import 'package:provider/provider.dart';
-
 import 'models/contact_manager.dart';
 
 void main() {

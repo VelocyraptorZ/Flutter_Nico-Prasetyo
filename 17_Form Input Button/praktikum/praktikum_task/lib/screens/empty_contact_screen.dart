@@ -15,7 +15,7 @@ class EmptyContactScreen extends StatelessWidget {
             image: AssetImage(
               'assets/images/empty_contact_background.png',
             ),
-            height: 250,
+            height: 200,
           ),
           const SizedBox(
             height: 20,
@@ -23,7 +23,7 @@ class EmptyContactScreen extends StatelessWidget {
           Text(
             'contact masih kosong...',
             style: GoogleFonts.poppins(
-              fontSize: 30,
+              fontSize: 20,
               fontWeight: FontWeight.w500,
             ),
           )
