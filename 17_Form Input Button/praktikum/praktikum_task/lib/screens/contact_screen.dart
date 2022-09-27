@@ -17,7 +17,7 @@ class ContactScreen extends StatelessWidget {
       ),
       body: buildContactScreen(),
       floatingActionButton: FloatingActionButton(
-        child: const Icon(Icons.add),
+        child: const Icon(Icons.person_add),
         onPressed: () {
           final manager = Provider.of<ContactManager>(context, listen: false);
           Navigator.push(
