@@ -32,12 +32,12 @@ class PostItem extends StatelessWidget {
                 children: [
                   SizedBox(
                     height: 50,
-                    width: 140,
+                    width: 145,
                     child: Center(child: Text('Published: ${post.day}')),
                   ),
                   SizedBox(
                       height: 50,
-                      width: 70,
+                      width: 65,
                       child: Center(
                         child: Row(
                           children: [
