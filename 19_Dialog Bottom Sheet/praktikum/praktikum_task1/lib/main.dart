@@ -97,7 +97,7 @@ class _ListImageState extends State<ListImage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Gallery Random Photo'),
+        title: const Text('Gallery Random Image'),
       ),
       body: GridView.builder(
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
@@ -149,7 +149,7 @@ class DetailImage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Detail Photo'),
+        title: const Text('Detail Image'),
       ),
       body: Center(
         child: Card(
