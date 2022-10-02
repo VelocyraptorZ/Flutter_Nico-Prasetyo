@@ -47,10 +47,8 @@ class ContactItemScreen extends StatefulWidget {
 
 class _ContactItemScreenState extends State<ContactItemScreen> {
   final _contactNameController = TextEditingController();
-  // ignore: unused_field
   String _contactName = '';
   final _contactNumberController = TextEditingController();
-  // ignore: unused_field
   String _contactNumber = '';
 
   @override
