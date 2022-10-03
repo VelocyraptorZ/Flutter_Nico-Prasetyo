@@ -13,6 +13,7 @@ class ContactItemScreen extends StatefulWidget {
 }
 
 class _ContactItemScreenState extends State<ContactItemScreen> {
+  final _formKey = GlobalKey<FormState>();
   final _contactNameController = TextEditingController();
   // ignore: unused_field
   String _contactName = '';
@@ -50,14 +51,17 @@ class _ContactItemScreenState extends State<ContactItemScreen> {
       ),
       body: Padding(
         padding: const EdgeInsets.all(16),
-        child: ListView(
-          children: [
-            buildNameField(),
-            const SizedBox(
-              height: 16,
-            ),
-            buildButton(),
-          ],
+        child: Form(
+          key: _formKey,
+          child: ListView(
+            children: [
+              buildNameField(),
+              const SizedBox(
+                height: 16,
+              ),
+              buildButton(),
+            ],
+          ),
         ),
       ),
     );
@@ -77,49 +81,41 @@ class _ContactItemScreenState extends State<ContactItemScreen> {
         const SizedBox(
           height: 8,
         ),
-        TextField(
+        TextFormField(
           controller: _contactNameController,
           cursorColor: Colors.black,
-          decoration: const InputDecoration(
+          decoration: InputDecoration(
             hintText: 'Input Contact Name',
-            enabledBorder: OutlineInputBorder(
-              borderSide: BorderSide(color: Colors.black),
-              borderRadius: BorderRadius.all(
-                Radius.circular(10),
-              ),
-            ),
-            focusedBorder: OutlineInputBorder(
-              borderSide: BorderSide(color: Colors.black),
-              borderRadius: BorderRadius.all(
-                Radius.circular(10),
-              ),
-            ),
+            border:
+                OutlineInputBorder(borderRadius: BorderRadius.circular(10.0)),
           ),
+          validator: (value) {
+            if (value!.isEmpty) {
+              return 'Contact Name Cannot Be Empty';
+            }
+            return null;
+          },
         ),
         const SizedBox(
           height: 8,
         ),
-        TextField(
+        TextFormField(
           controller: _contactNumberController,
           cursorColor: Colors.black,
           inputFormatters: <TextInputFormatter>[
             FilteringTextInputFormatter.digitsOnly
           ],
-          decoration: const InputDecoration(
+          decoration: InputDecoration(
             hintText: 'Input Contact Number',
-            enabledBorder: OutlineInputBorder(
-              borderSide: BorderSide(color: Colors.black),
-              borderRadius: BorderRadius.all(
-                Radius.circular(10),
-              ),
-            ),
-            focusedBorder: OutlineInputBorder(
-              borderSide: BorderSide(color: Colors.black),
-              borderRadius: BorderRadius.all(
-                Radius.circular(10),
-              ),
-            ),
+            border:
+                OutlineInputBorder(borderRadius: BorderRadius.circular(10.0)),
           ),
+          validator: (value) {
+            if (value!.isEmpty) {
+              return 'Contact Number Cannot Be Empty';
+            }
+            return null;
+          },
         )
       ],
     );
@@ -132,12 +128,14 @@ class _ContactItemScreenState extends State<ContactItemScreen> {
         style: GoogleFonts.poppins(fontWeight: FontWeight.w500),
       ),
       onPressed: () {
-        final contactItem = ContactModel(
-          id: const Uuid().v1(),
-          contactName: _contactNameController.text,
-          contactNumber: _contactNumberController.text,
-        );
-        widget.onCreate(contactItem);
+        if (_formKey.currentState!.validate()) {
+          final contactItem = ContactModel(
+            id: const Uuid().v1(),
+            contactName: _contactNameController.text,
+            contactNumber: _contactNumberController.text,
+          );
+          widget.onCreate(contactItem);
+        }
       },
     );
   }
