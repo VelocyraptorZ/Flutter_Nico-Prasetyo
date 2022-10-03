@@ -70,7 +70,7 @@ class _ContactFormScreenState extends State<ContactFormScreen> {
 
   Widget buildNameField() {
     return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
           'Contact',
