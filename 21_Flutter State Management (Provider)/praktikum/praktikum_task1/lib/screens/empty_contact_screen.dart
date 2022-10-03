@@ -12,7 +12,7 @@ class EmptyContactScreen extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
-            'contact masih kosong...',
+            'contact is empty...',
             style: GoogleFonts.poppins(
               fontSize: 20,
               fontWeight: FontWeight.w500,
