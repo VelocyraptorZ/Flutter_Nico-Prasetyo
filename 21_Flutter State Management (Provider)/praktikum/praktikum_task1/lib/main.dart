@@ -14,7 +14,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Task Management',
       home: ContactScreen(),
     );
   }
@@ -30,6 +29,10 @@ class ContactScreen extends StatefulWidget {
 class _ContactScreenState extends State<ContactScreen> {
   List<ContactModel> manager = [];
   final _random = Random();
+
+  void deleteContact(int index) {
+    manager.removeAt(index);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -66,6 +69,54 @@ class _ContactScreenState extends State<ContactScreen> {
                   ),
                 ),
               ),
+              trailing: IconButton(
+                onPressed: () {
+                  showDialog(
+                    context: context,
+                    builder: (context) => AlertDialog(
+                      content: Text(
+                        'Delete Contact?',
+                        style: GoogleFonts.poppins(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                      actions: [
+                        TextButton(
+                          onPressed: () {
+                            Navigator.pop(context);
+                          },
+                          child: Text(
+                            'NO',
+                            style: GoogleFonts.poppins(
+                              fontSize: 17,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                        ),
+                        TextButton(
+                          onPressed: () {
+                            deleteContact(index);
+                            Navigator.pop(context);
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(
+                                  content: Text('${item.contactName} Deleted')),
+                            );
+                          },
+                          child: Text(
+                            'YES',
+                            style: GoogleFonts.poppins(
+                              fontSize: 17,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  );
+                },
+                icon: const Icon(Icons.delete_forever_rounded),
+              ),
             );
           },
         ),
@@ -76,7 +127,7 @@ class _ContactScreenState extends State<ContactScreen> {
           ContactModel data = await Navigator.push(
               context,
               MaterialPageRoute(
-                  builder: (context) => const ContactItemScreen()));
+                  builder: (context) => const ContactFormScreen()));
           setState(() {
             manager.add(ContactModel(
                 contactName: data.contactName,
@@ -98,16 +149,16 @@ class ContactModel {
   });
 }
 
-class ContactItemScreen extends StatefulWidget {
-  const ContactItemScreen({
+class ContactFormScreen extends StatefulWidget {
+  const ContactFormScreen({
     super.key,
   });
 
   @override
-  State<ContactItemScreen> createState() => _ContactItemScreenState();
+  State<ContactFormScreen> createState() => _ContactFormScreenState();
 }
 
-class _ContactItemScreenState extends State<ContactItemScreen> {
+class _ContactFormScreenState extends State<ContactFormScreen> {
   final _contactNameController = TextEditingController();
   // ignore: unused_field
   String _contactName = '';
@@ -223,7 +274,7 @@ class _ContactItemScreenState extends State<ContactItemScreen> {
   Widget buildButton() {
     return ElevatedButton(
       child: Text(
-        'Submit',
+        'Save',
         style: GoogleFonts.poppins(fontWeight: FontWeight.w500),
       ),
       onPressed: () {
