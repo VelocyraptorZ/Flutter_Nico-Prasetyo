@@ -22,3 +22,11 @@ e. Ubah state di UI dengan setState() <br>
 2. Buatlah projek daftar kontak seperti soal nomor 1, dengan menggunakan state management Provider untuk mengubah state di UI
 
 #### Hasil Praktikum Task 2 Menggunakan Provider
+
+![](../screenshots/Screenshot_EmptyScreenPraktikumTask2.png)
+
+![](../screenshots/Screenshot_HalCreateNewContactPraktikumTask2(Validate).png)
+
+![](../screenshots/Screenshot_HalCreateNewContactPraktikumTask2.png)
+
+![](../screenshots/Screenshot_ListContactPraktikumTask2.png)
