@@ -11,4 +11,6 @@ c. Simpan hasil kontak yang baru dibuat dalam sebuah Map untuk nama dan emailnya
 d. Gunakan List diatas untuk menampilkan daftar kontak pada halaman Home <br>
 e. Ubah state di UI dengan setState() <br>
 
+#### Hasil Praktikum Task 1 Menggunakan SetState
+
 2. Buatlah projek daftar kontak seperti soal nomor 1, dengan menggunakan state management Provider untuk mengubah state di UI
