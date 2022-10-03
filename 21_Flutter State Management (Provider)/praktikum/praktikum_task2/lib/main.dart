@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
       ],
       child: const MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: 'Task Management',
+        title: 'Task Management With Provider',
         home: ContactScreen(),
       ),
     );
