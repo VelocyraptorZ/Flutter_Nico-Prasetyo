@@ -30,7 +30,6 @@ Penggunaan untuk state management yang lebih kompleks seperti app state, pendeka
 - Bloc
 Menggunakan pola stream/observable, untuk memisahkan UI dengan bisnisnya logicnya
 
-
 ### Provider
 Class yang perlu diperhatikan dalam penggunaan provider, yaitu:
 #### Dari Package Provider
