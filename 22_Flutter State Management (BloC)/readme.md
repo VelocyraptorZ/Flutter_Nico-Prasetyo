@@ -54,3 +54,15 @@ b. Digunakan dengan cara meng-extends <br>
 c. Memanggil notifyListeners(), fungsi yang memeberitahu widget yang menggunakan state bahwa terjadi perubahan data sehingga UI nya harus dibagun ulang <br>
 
 ### BLoC 
+- BLoC (Business Logic Component)
+- Memisahkan antara business logic dengan UI
+
+#### BLoC dibuat dengan mempertimbangkan tiga prinsip panduan:
+- Simple: Mudah dipahami dan dapat digunakan oleh pengembang dari semua tingkat keahlian.
+- Powerful: Membantu dalam pembuatan aplikasi yang luar biasa dan canggih dengan memecahnya menjadi komponen yang lebih kecil.
+- Testable: Dapat dengan mudah menguji setiap bagian aplikasi.
+
+#### Cara Kerja BLoC
+- Menerima event sebagai input
+- Dianalisa dan Dikelola didalam BloC
+- Menghasilkan state sebagai output
