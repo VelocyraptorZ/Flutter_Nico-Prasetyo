@@ -1,10 +1,10 @@
-# RESUME SECTION 22 Flutter State Management (BloC)
+# RESUME SECTION 22 Flutter State Management (BLoC)
 
 ## Data Diri
 Nomor Urut  : 1_016FLC_34 <br>
 Nama        : Nico Prasetyo
 
-## Summary Flutter State Management (BloC)
+## Summary Flutter State Management (BLoC)
 
 ### Declarative UI
 - Flutter memiliki sifat declarative yang artinya flutter membangun UI nya pada screen untuk mencerminkan keadaan state saat ini
