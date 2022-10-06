@@ -11,10 +11,14 @@ class LoginScreen extends StatelessWidget {
         child: Center(
           child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
             _usernameField(),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             _passwordField(),
+            const SizedBox(
+              height: 10,
+            ),
+            _loginButton(),
           ]),
         ),
       ),
@@ -38,6 +42,13 @@ class LoginScreen extends StatelessWidget {
         hintText: 'Username',
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(10.0)),
       ),
+    );
+  }
+
+  Widget _loginButton() {
+    return ElevatedButton(
+      onPressed: () {},
+      child: const Text('Login'),
     );
   }
 }
