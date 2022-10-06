@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:praktikum_task/screens/contact_screen.dart';
 
 class LoginScreen extends StatelessWidget {
   final _formKey = GlobalKey<FormState>();
@@ -31,7 +32,17 @@ class LoginScreen extends StatelessWidget {
               const SizedBox(
                 height: 10,
               ),
-              _loginButton(),
+              ElevatedButton(
+                onPressed: () {
+                  if (_formKey.currentState!.validate()) {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const ContactScreen()));
+                  }
+                },
+                child: const Text('Login'),
+              ),
             ]),
           ),
         ),
@@ -72,15 +83,6 @@ class LoginScreen extends StatelessWidget {
         }
         return null;
       },
-    );
-  }
-
-  Widget _loginButton() {
-    return ElevatedButton(
-      onPressed: () {
-        if (_formKey.currentState!.validate()) {}
-      },
-      child: const Text('Login'),
     );
   }
 }

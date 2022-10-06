@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:praktikum_task/screens/contact_login_screen.dart';
 import 'bloc/contact_bloc.dart';
-import 'screens/contact_screen.dart';
 
 void main() {
   runApp(MultiBlocProvider(
@@ -18,7 +17,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Task Management With SetState',
-      // home: ContactScreen(),
       home: LoginScreen(),
     );
   }
