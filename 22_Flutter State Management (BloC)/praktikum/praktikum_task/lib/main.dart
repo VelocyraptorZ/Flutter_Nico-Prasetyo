@@ -18,8 +18,8 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Task Management With SetState',
-      // home: ContactScreen(),
-      home: LoginScreen(),
+      home: ContactScreen(),
+      // home: LoginScreen(),
     );
   }
 }
