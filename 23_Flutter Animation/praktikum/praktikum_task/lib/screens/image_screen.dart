@@ -8,7 +8,7 @@ class ImageScreen extends StatefulWidget {
 }
 
 class _ImageScreenState extends State<ImageScreen> {
-  bool isTapped = false;
+  bool isTapped = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
