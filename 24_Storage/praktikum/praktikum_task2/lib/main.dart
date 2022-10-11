@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:praktikum_task2/bloc/user_bloc.dart';
 import 'screens/register_screen.dart';
 
 void main() {
@@ -12,10 +13,12 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Shared Preferences With Provider',
-      home: RegisterScreen(),
+    return BlocProvider<UserBloc>(
+      create: (context) => UserBloc(),
+      child: const MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: RegisterScreen(),
+      ),
     );
   }
 }

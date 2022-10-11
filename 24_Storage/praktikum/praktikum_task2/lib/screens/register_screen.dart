@@ -1,6 +1,7 @@
 import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import '../bloc/user_bloc.dart';
 import 'home_page.dart';
 
 class RegisterScreen extends StatefulWidget {
@@ -20,32 +21,21 @@ class _RegisterScreenState extends State<RegisterScreen> {
   final _numberController = TextEditingController();
   final _passwordController = TextEditingController();
 
-  late SharedPreferences registerdata;
-  late bool newUser;
-
   @override
-  void initState() {
-    super.initState();
-    checkRegister();
-  }
-
-  void checkRegister() async {
-    registerdata = await SharedPreferences.getInstance();
-    newUser = registerdata.getBool('register') ?? true;
-
-    if (newUser == false) {
-      // ignore: use_build_context_synchronously
-      Navigator.pushAndRemoveUntil(
-          context,
-          MaterialPageRoute(
-            builder: (context) => const HomePage(),
-          ),
-          (route) => false);
-    }
+  void dispose() {
+    _nameController.dispose();
+    _emailController.dispose();
+    _numberController.dispose();
+    _passwordController.dispose();
+    super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
+    final userManager = BlocProvider.of<UserBloc>(context);
+    userManager.add(
+      CheckRegister(context: context),
+    );
     return Scaffold(
         appBar: AppBar(
           title: const Text('Register'),
@@ -133,24 +123,22 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 ElevatedButton(
                   onPressed: () {
                     final isValidForm = formKey.currentState!.validate();
-
                     String username = _nameController.text;
                     String email = _emailController.text;
                     String number = _numberController.text;
-                    String password = _passwordController.text;
 
                     if (isValidForm) {
-                      registerdata.setBool('register', false);
-                      registerdata.setString('username', username);
-                      registerdata.setString('email', email);
-                      registerdata.setString('number', number);
-                      registerdata.setString('password', password);
+                      userManager.add(AddBool(newUser: false));
+                      userManager.add(AddName(username: username));
+                      userManager.add(AddEmail(email: email));
+                      userManager.add(AddNumber(number: number));
                       Navigator.pushAndRemoveUntil(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const HomePage(),
-                          ),
-                          (route) => false);
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const HomePage(),
+                        ),
+                        (route) => false,
+                      );
                     }
                   },
                   child: const Text('Register'),
