@@ -17,6 +17,7 @@ class MyApp extends StatelessWidget {
       create: (context) => UserBloc(),
       child: const MaterialApp(
         debugShowCheckedModeBanner: false,
+        title: 'Shared Preferences With BLoC Provider',
         home: RegisterScreen(),
       ),
     );
