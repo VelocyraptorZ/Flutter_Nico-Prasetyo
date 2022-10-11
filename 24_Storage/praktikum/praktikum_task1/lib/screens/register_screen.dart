@@ -166,7 +166,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           (route) => false);
                     }
                   },
-                  child: const Text('register'),
+                  child: const Text('Register'),
                 ),
               ],
             ),

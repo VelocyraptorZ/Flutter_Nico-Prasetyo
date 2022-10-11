@@ -64,7 +64,7 @@ class _HomePageState extends State<HomePage> {
               ),
               ElevatedButton(
                   onPressed: () {
-                    registerdata.setBool('login', true);
+                    registerdata.setBool('register', true);
                     registerdata.remove('username');
                     registerdata.remove('email');
                     Navigator.pushReplacement(
