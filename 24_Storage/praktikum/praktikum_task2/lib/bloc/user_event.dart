@@ -19,16 +19,9 @@ class Initial extends UserEvent {}
 
 // ignore: must_be_immutable
 class AddRegister extends UserEvent {
-  bool newUser;
-  String username;
-  String email;
-  String number;
-  AddRegister({
-    required this.newUser,
-    required this.username,
-    required this.email,
-    required this.number,
-  });
+  UserModel userModel;
+
+  AddRegister({required this.userModel});
 }
 
 class RemoveRegister extends UserEvent {}

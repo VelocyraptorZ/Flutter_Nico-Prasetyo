@@ -1,6 +1,7 @@
 import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:praktikum_task2/models/user_model.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../bloc/user_bloc.dart';
 import 'home_page.dart';
@@ -150,11 +151,15 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     String number = _numberController.text;
 
                     if (isValidForm) {
-                      userManager.add(AddRegister(
-                          newUser: false,
-                          username: username,
-                          email: email,
-                          number: number));
+                      userManager.add(
+                        AddRegister(
+                          userModel: UserModel(
+                              newUser: false,
+                              username: username,
+                              email: email,
+                              number: number),
+                        ),
+                      );
                       Navigator.pushAndRemoveUntil(
                         context,
                         MaterialPageRoute(
