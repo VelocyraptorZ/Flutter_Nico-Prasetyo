@@ -25,5 +25,3 @@ class AddRegister extends UserEvent {
 }
 
 class RemoveRegister extends UserEvent {}
-
-class ChangeUser extends UserEvent {}
