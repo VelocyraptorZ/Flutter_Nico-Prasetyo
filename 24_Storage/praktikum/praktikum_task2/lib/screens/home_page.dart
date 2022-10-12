@@ -31,7 +31,7 @@ class _HomePageState extends State<HomePage> {
       body: Center(
         child: BlocBuilder<UserBloc, UserState>(
           builder: (context, state) {
-            if (state is UserChanged) {
+            if (state is UserRegister) {
               return Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [

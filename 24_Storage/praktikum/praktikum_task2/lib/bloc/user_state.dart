@@ -8,11 +8,11 @@ abstract class UserState extends Equatable {
 }
 
 // ignore: must_be_immutable
-class UserChanged extends UserState {
+class UserRegister extends UserState {
   String username;
   String email;
   String number;
-  UserChanged({
+  UserRegister({
     this.username = '',
     this.email = '',
     this.number = '',

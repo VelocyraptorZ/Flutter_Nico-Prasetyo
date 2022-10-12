@@ -1,6 +1,7 @@
 import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import '../bloc/user_bloc.dart';
 import 'home_page.dart';
 
@@ -30,12 +31,33 @@ class _RegisterScreenState extends State<RegisterScreen> {
     super.dispose();
   }
 
+  late SharedPreferences registerdata;
+  late bool newUser;
+
+  @override
+  void initState() {
+    super.initState();
+    checkRegister();
+  }
+
+  void checkRegister() async {
+    registerdata = await SharedPreferences.getInstance();
+    newUser = registerdata.getBool('register') ?? true;
+
+    if (newUser == false) {
+      // ignore: use_build_context_synchronously
+      Navigator.pushAndRemoveUntil(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const HomePage(),
+          ),
+          (route) => false);
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     final userManager = BlocProvider.of<UserBloc>(context);
-    userManager.add(
-      CheckRegister(context: context),
-    );
     return Scaffold(
         appBar: AppBar(
           title: const Text('Register'),
