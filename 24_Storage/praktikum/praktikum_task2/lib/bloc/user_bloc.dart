@@ -44,64 +44,24 @@ class UserBloc extends Bloc<UserEvent, UserState> {
       },
     );
 
-    on<AddBool>(
+    on<AddRegister>(
       (event, emit) async {
         if (state is UserChanged) {
           registerdata = await SharedPreferences.getInstance();
           registerdata.setBool('register', event.newUser);
-        }
-      },
-    );
-
-    on<AddName>(
-      (event, emit) async {
-        if (state is UserChanged) {
-          registerdata = await SharedPreferences.getInstance();
           registerdata.setString('username', event.username);
-        }
-      },
-    );
-
-    on<AddEmail>(
-      (event, emit) async {
-        if (state is UserChanged) {
-          registerdata = await SharedPreferences.getInstance();
           registerdata.setString('email', event.email);
-        }
-      },
-    );
-
-    on<AddNumber>(
-      (event, emit) async {
-        if (state is UserChanged) {
-          registerdata = await SharedPreferences.getInstance();
           registerdata.setString('number', event.number);
         }
       },
     );
 
-    on<RemoveName>(
+    on<RemoveRegister>(
       (event, emit) async {
         if (state is UserChanged) {
           registerdata = await SharedPreferences.getInstance();
           registerdata.remove('username');
-        }
-      },
-    );
-
-    on<RemoveEmail>(
-      (event, emit) async {
-        if (state is UserChanged) {
-          registerdata = await SharedPreferences.getInstance();
           registerdata.remove('email');
-        }
-      },
-    );
-
-    on<RemoveNumber>(
-      (event, emit) async {
-        if (state is UserChanged) {
-          registerdata = await SharedPreferences.getInstance();
           registerdata.remove('number');
         }
       },

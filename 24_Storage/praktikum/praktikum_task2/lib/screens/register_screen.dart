@@ -128,10 +128,11 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     String number = _numberController.text;
 
                     if (isValidForm) {
-                      userManager.add(AddBool(newUser: false));
-                      userManager.add(AddName(username: username));
-                      userManager.add(AddEmail(email: email));
-                      userManager.add(AddNumber(number: number));
+                      userManager.add(AddRegister(
+                          newUser: false,
+                          username: username,
+                          email: email,
+                          number: number));
                       Navigator.pushAndRemoveUntil(
                         context,
                         MaterialPageRoute(

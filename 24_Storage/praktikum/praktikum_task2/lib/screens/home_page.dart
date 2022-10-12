@@ -53,10 +53,12 @@ class _HomePageState extends State<HomePage> {
                   ),
                   ElevatedButton(
                     onPressed: () {
-                      userManager.add(AddBool(newUser: true));
-                      userManager.add(RemoveName());
-                      userManager.add(RemoveEmail());
-                      userManager.add(RemoveNumber());
+                      userManager.add(AddRegister(
+                          newUser: true,
+                          username: username,
+                          email: email,
+                          number: number));
+                      userManager.add(RemoveRegister());
                       Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(
