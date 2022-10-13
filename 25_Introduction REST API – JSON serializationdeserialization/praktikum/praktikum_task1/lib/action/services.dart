@@ -1,6 +1,7 @@
 // ignore_for_file: unused_local_variable, no_leading_underscores_for_local_identifiers
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+import 'package:praktikum_task1/models/user_model_get.dart';
 import '../models/user_model.dart';
 
 class MyService {
@@ -10,7 +11,8 @@ class MyService {
   Future GetUsers() async {
     try {
       final Response response = await dio.get('https://reqres.in/api/users');
-      debugPrint(response.data.toString());
+      final UserModelGet _usermodelget = UserModelGet.fromJson(response.data);
+      debugPrint(_usermodelget.toMap().toString());
       return response.data;
     } catch (e) {
       rethrow;
