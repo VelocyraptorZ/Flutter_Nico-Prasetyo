@@ -11,4 +11,14 @@ c. Tombol 2: gunakan tombol kedua untuk melakukan POST request menggunakan Dio, 
 d. Tombol 3: gunakan tombol ketiga untuk melakukan PUT request menggunakan Dio, untuk request ke url: https://reqres.in/api/users/4. Data request yang digunakan untuk url ini adalah dengan sebuah Map, dengan key berupa name & job. Gunakan data dari Textfield sebagai value untuk data request. Tampilkan hasil responsenya ke dalam text <br>
 e. Tombol 4: gunakan tombol keempat untuk melakukan DELETE request menggunakan Dio, untuk request ke url: https://reqres.in/api/users/4. <br>
 
+![](../screenshots/Screenshot_TampilanAwal.png)
+
+![](../screenshots/Screenshot_TampilanTombolGET.png)
+
+![](../screenshots/Screenshot_TampilanTombolPOST.png)
+
+![](../screenshots/Screenshot_TampilanTombolPUT.png)
+
+![](../screenshots/Screenshot_TampilanTombolDELETE.png)
+
 2. Buatlah sebuah Object/Map dari suatu Class(Model Class) menggunakan hasil/response dari soal nomor 1(b).
