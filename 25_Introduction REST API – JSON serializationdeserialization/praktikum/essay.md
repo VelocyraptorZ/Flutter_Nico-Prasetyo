@@ -22,3 +22,5 @@ e. Tombol 4: gunakan tombol keempat untuk melakukan DELETE request menggunakan D
 ![](../screenshots/Screenshot_TampilanTombolDELETE.png)
 
 2. Buatlah sebuah Object/Map dari suatu Class(Model Class) menggunakan hasil/response dari soal nomor 1(b).
+
+![](../screenshots/Screenshot_HasilGet(Object%20atau%20Map).png)
