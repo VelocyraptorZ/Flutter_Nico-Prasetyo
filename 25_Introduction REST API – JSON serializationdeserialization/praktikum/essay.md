@@ -1,4 +1,4 @@
-# PRAKTIKUM SECTION 24 Introduction REST API – JSON serialization / deserialization
+# PRAKTIKUM SECTION 25 Introduction REST API – JSON serialization / deserialization
 
 ## Data Diri
 Nomor Urut  : 1_016FLC_34 <br>
