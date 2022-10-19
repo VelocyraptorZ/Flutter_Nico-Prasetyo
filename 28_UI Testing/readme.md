@@ -26,10 +26,10 @@ Disebut widget testing sehinga pengujian dilakukan pada widgets dengan menuliska
     - tiap skenario pengujian disebut test case 
     ```cs
     void main() {
-        testWidgets ('Judul Halaman Harus ....', (WidgetTester) async{
+        testWidgets ('Judul Halaman Harus .....', (WidgetTester) async{
         });
 
-        testWidgets ('Tombol Harus ....', (WidgetTester) async{
+        testWidgets ('Tombol Harus .....', (WidgetTester) async{
         });
     }
     ``` 
