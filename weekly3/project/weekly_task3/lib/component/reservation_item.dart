@@ -41,7 +41,7 @@ class ReservationItem extends StatelessWidget {
               context: context,
               builder: (context) => AlertDialog(
                 content: Text(
-                  'Delete Contact?',
+                  'Delete Data?',
                   style: GoogleFonts.poppins(
                     fontSize: 20,
                     fontWeight: FontWeight.w600,

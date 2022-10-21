@@ -177,7 +177,7 @@ class _ReservationFormScreenState extends State<ReservationFormScreen> {
                             validator: (email) {
                               if (email != null &&
                                   !EmailValidator.validate(email)) {
-                                return 'Enter a valid email';
+                                return 'Email harus benar';
                               } else {
                                 return null;
                               }
@@ -246,19 +246,11 @@ class _ReservationFormScreenState extends State<ReservationFormScreen> {
                   ),
                   onPressed: () {
                     if (_formKey.currentState!.validate() && !_isUpdate) {
-                      final reservation = ReservationModel(
-                        FirstName: _FirstNameController.text,
-                        LastName: _LastNameController.text,
-                        Email: _EmailController.text,
-                        Problem: _ProblemController.text,
-                      );
-                      Provider.of<ReservationViewModel>(context, listen: false)
-                          .addReservation(reservation);
                       setText();
                       showDialog<String>(
                         context: context,
                         builder: (context) => AlertDialog(
-                          title: const Text('Your Data'),
+                          title: const Text('Your Data Submit'),
                           content: Column(
                             crossAxisAlignment: CrossAxisAlignment.stretch,
                             mainAxisSize: MainAxisSize.min,
@@ -270,16 +262,82 @@ class _ReservationFormScreenState extends State<ReservationFormScreen> {
                           ),
                           actions: [
                             ElevatedButton(
-                              onPressed: () => Navigator.pop(context, 'OK'),
+                              onPressed: () {
+                                final reservation = ReservationModel(
+                                  FirstName: _FirstNameController.text,
+                                  LastName: _LastNameController.text,
+                                  Email: _EmailController.text,
+                                  Problem: _ProblemController.text,
+                                );
+                                Provider.of<ReservationViewModel>(context,
+                                        listen: false)
+                                    .addReservation(reservation);
+                                _FirstNameController.clear();
+                                _LastNameController.clear();
+                                _EmailController.clear();
+                                _ProblemController.clear();
+                                Navigator.pop(context);
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                  const SnackBar(
+                                      content: Text('Data Has Been Submitted')),
+                                );
+                              },
                               child: const Text('OK'),
+                            ),
+                            ElevatedButton(
+                              onPressed: () => Navigator.pop(context, 'CANCEL'),
+                              child: const Text('CANCEL'),
                             ),
                           ],
                         ),
                       );
-                      _FirstNameController.clear();
-                      _LastNameController.clear();
-                      _EmailController.clear();
-                      _ProblemController.clear();
+                    } else {
+                      setText();
+                      showDialog<String>(
+                        context: context,
+                        builder: (context) => AlertDialog(
+                          title: const Text('Your Data Update'),
+                          content: Column(
+                            crossAxisAlignment: CrossAxisAlignment.stretch,
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              Text('Name : $firstName $lastName'),
+                              Text('Email : $email'),
+                              Text('Your Problem : $problem'),
+                            ],
+                          ),
+                          actions: [
+                            ElevatedButton(
+                              onPressed: () {
+                                final reservation = ReservationModel(
+                                  id: widget.reservationModel!.id,
+                                  FirstName: _FirstNameController.text,
+                                  LastName: _LastNameController.text,
+                                  Email: _EmailController.text,
+                                  Problem: _ProblemController.text,
+                                );
+                                Provider.of<ReservationViewModel>(context,
+                                        listen: false)
+                                    .updateReservation(reservation);
+                                _FirstNameController.clear();
+                                _LastNameController.clear();
+                                _EmailController.clear();
+                                _ProblemController.clear();
+                                Navigator.pop(context);
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                  const SnackBar(
+                                      content: Text('Data Has Been Updated')),
+                                );
+                              },
+                              child: const Text('OK'),
+                            ),
+                            ElevatedButton(
+                              onPressed: () => Navigator.pop(context, 'CANCEL'),
+                              child: const Text('CANCEL'),
+                            ),
+                          ],
+                        ),
+                      );
                     }
                   },
                 ),
