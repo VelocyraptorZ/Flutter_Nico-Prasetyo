@@ -280,16 +280,6 @@ class _ReservationFormScreenState extends State<ReservationFormScreen> {
                       _LastNameController.clear();
                       _EmailController.clear();
                       _ProblemController.clear();
-                    } else {
-                      final reservation = ReservationModel(
-                        id: widget.reservationModel!.id,
-                        FirstName: _FirstNameController.text,
-                        LastName: _LastNameController.text,
-                        Email: _EmailController.text,
-                        Problem: _ProblemController.text,
-                      );
-                      Provider.of<ReservationViewModel>(context, listen: false)
-                          .updateReservation(reservation);
                     }
                   },
                 ),

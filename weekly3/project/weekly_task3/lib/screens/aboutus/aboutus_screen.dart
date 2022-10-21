@@ -1,17 +1,7 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
 import '../../model/hotelroom_model.dart';
-
-// class Hotelroom {
-//   String room;
-//   String price;
-//   String level;
-
-//   Color color;
-//   Hotelroom(this.room, this.price, this.level, this.color);
-// }
 
 class AboutUs extends StatelessWidget {
   const AboutUs({super.key});
@@ -68,7 +58,6 @@ class AboutUs extends StatelessWidget {
         itemBuilder: (ctx, i) => Container(
           margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
           clipBehavior: Clip.hardEdge,
-          //margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(25),
