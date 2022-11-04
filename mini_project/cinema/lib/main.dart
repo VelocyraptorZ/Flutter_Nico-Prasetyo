@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'screens/category/category_view_model.dart';
 import 'screens/detail/movie_detail_view_model.dart';
+import 'package:cinema/screens/contactus/contactus_view_model.dart';
 import 'screens/home/home_view_model.dart';
 import 'screens/person/person_view_model.dart';
 import 'screens/home/home_screen.dart';
@@ -21,6 +22,9 @@ void main() {
     ),
     ChangeNotifierProvider(
       create: (context) => MovieDetailViewModel(),
+    ),
+    ChangeNotifierProvider(
+      create: (context) => ContactUsViewModel(),
     ),
   ], child: const MyApp()));
 }

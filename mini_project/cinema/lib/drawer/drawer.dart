@@ -1,7 +1,11 @@
 // ignore_for_file: must_be_immutable, import_of_legacy_library_into_null_safe
 
+import 'package:cinema/screens/contactus/contactus_form_screen.dart';
+import 'package:cinema/screens/transitions/transition.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import '../screens/aboutus/aboutus_screen.dart';
+import '../screens/contactus/contactus_screen.dart';
 import '../screens/home/home_screen.dart';
 import '../screens/login/login_screen.dart';
 
@@ -60,32 +64,50 @@ class _DrawerScreenState extends State<DrawerScreen> {
             title: 'Movie',
             onTilePressed: () {
               Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => const HomeScreen(),
-                ),
-              );
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const HomeScreen(),
+                  ));
             },
           ),
           DrawerListTile(
             iconData: Icons.contact_support_outlined,
             title: 'Contact Us',
-            onTilePressed: () {},
+            onTilePressed: () {
+              Navigator.push(
+                context,
+                Transition(
+                  widget: const ContactUsFormScreen(),
+                ),
+              );
+            },
+          ),
+          DrawerListTile(
+            iconData: Icons.list_alt_outlined,
+            title: 'Contact Us List Data',
+            onTilePressed: () {
+              Navigator.push(
+                context,
+                Transition(
+                  widget: const ContactUsScreen(),
+                ),
+              );
+            },
           ),
           DrawerListTile(
             iconData: Icons.info_outlined,
             title: 'About Us',
             onTilePressed: () {
-              // Navigator.push(
-              //   context,
-              //   MaterialPageRoute(
-              //     builder: (context) => const AboutUs(),
-              //   ),
-              // );
+              Navigator.push(
+                context,
+                Transition(
+                  widget: const AboutUsScreen(),
+                ),
+              );
             },
           ),
           const SizedBox(
-            height: 400,
+            height: 350,
           ),
           DrawerListTile(
             iconData: Icons.login_outlined,
@@ -96,8 +118,8 @@ class _DrawerScreenState extends State<DrawerScreen> {
               logindata.remove('email');
               Navigator.pushAndRemoveUntil(
                   context,
-                  MaterialPageRoute(
-                    builder: (context) => const LoginScreen(),
+                  Transition(
+                    widget: const LoginScreen(),
                   ),
                   (route) => false);
             },
