@@ -33,6 +33,23 @@ void main() {
       await tester.pump(const Duration(milliseconds: 1000));
       await tester.tap(find.widgetWithText(TextFormField, 'Password'));
       await tester.pump(const Duration(milliseconds: 1000));
+
+      Finder username = find.widgetWithText(TextFormField, 'Username');
+      Finder email = find.widgetWithText(TextFormField, 'Email');
+      Finder password = find.widgetWithText(TextFormField, 'Password');
+
+      await tester.enterText(username, "Nico Prasetyo");
+      await tester.enterText(email, "khokhonicho@gmail.com");
+      await tester.enterText(password, "testingpassword");
+      await tester.pump();
+
+      expect(find.text('Nico Prasetyo'), findsOneWidget);
+      expect(find.text('khokhonicho@gmail.com'), findsOneWidget);
+      expect(find.text('testingpassword'), findsOneWidget);
+
+      expect(find.text('Enter at least 4 characters'), findsNothing);
+      expect(find.text('Enter a valid email'), findsNothing);
+      expect(find.text('Enter min. 5 characters'), findsNothing);
     });
   });
 }
