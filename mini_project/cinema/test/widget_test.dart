@@ -5,26 +5,34 @@
 // gestures. You can also use WidgetTester to find child widgets in the widget
 // tree, read text, and verify that the values of widget properties are correct.
 
-// import 'package:flutter/material.dart';
-// import 'package:flutter_test/flutter_test.dart';
+import 'package:cinema/screens/login/login_screen.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_test/flutter_test.dart';
 
-// import 'package:cinema/main.dart';
+void main() {
+  group('Login Screen', () {
+    testWidgets('Testing Form Validator', (WidgetTester tester) async {
+      await tester.pumpWidget(const MaterialApp(
+        home: LoginScreen(),
+      ));
 
-// void main() {
-//   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-//     // Build our app and trigger a frame.
-//     await tester.pumpWidget(const MyApp());
+      expect(find.byType(LoginScreen), findsWidgets);
 
-//     // Verify that our counter starts at 0.
-//     expect(find.text('0'), findsOneWidget);
-//     expect(find.text('1'), findsNothing);
+      expect(find.text('Login'), findsOneWidget);
 
-//     // Tap the '+' icon and trigger a frame.
-//     await tester.tap(find.byIcon(Icons.add));
-//     await tester.pump();
+      await tester.tap(find.widgetWithText(ElevatedButton, 'Login'));
+      await tester.pump();
 
-//     // Verify that our counter has incremented.
-//     expect(find.text('0'), findsNothing);
-//     expect(find.text('1'), findsOneWidget);
-//   });
-// }
+      expect(find.text('Enter at least 4 characters'), findsOneWidget);
+      expect(find.text('Enter a valid email'), findsOneWidget);
+      expect(find.text('Enter min. 5 characters'), findsOneWidget);
+
+      await tester.tap(find.widgetWithText(TextFormField, 'Username'));
+      await tester.pump(const Duration(milliseconds: 1000));
+      await tester.tap(find.widgetWithText(TextFormField, 'Email'));
+      await tester.pump(const Duration(milliseconds: 1000));
+      await tester.tap(find.widgetWithText(TextFormField, 'Password'));
+      await tester.pump(const Duration(milliseconds: 1000));
+    });
+  });
+}
