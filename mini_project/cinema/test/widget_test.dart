@@ -5,9 +5,13 @@
 // gestures. You can also use WidgetTester to find child widgets in the widget
 // tree, read text, and verify that the values of widget properties are correct.
 
+// ignore_for_file: avoid_print
+
 import 'package:cinema/screens/login/login_screen.dart';
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:http_mock_adapter/http_mock_adapter.dart';
 
 void main() {
   group('Login Screen', () {
@@ -50,6 +54,79 @@ void main() {
       expect(find.text('Enter at least 4 characters'), findsNothing);
       expect(find.text('Enter a valid email'), findsNothing);
       expect(find.text('Enter min. 5 characters'), findsNothing);
+    });
+  });
+
+  group('THE MOVIE DB API', () {
+    test('Get Now Playing Movie', () async {
+      final dio = Dio();
+      final dioAdapter = DioAdapter(dio: dio);
+
+      const baseUrl = 'https://api.themoviedb.org/3';
+      const apiKey = 'api_key=b28f9cb8bea2883dc20a4d142ca9caf4';
+      const url = '$baseUrl/movie/now_playing?$apiKey';
+
+      dioAdapter.onGet(
+        url,
+        (request) =>
+            request.reply(200, {'message': 'Successfully mocked GET!'}),
+      );
+
+      final onGetResponse = await dio.get(url);
+      print(onGetResponse.data);
+    });
+
+    test('Get Movie By Genre', () async {
+      final dio = Dio();
+      final dioAdapter = DioAdapter(dio: dio);
+
+      const baseUrl = 'https://api.themoviedb.org/3';
+      const apiKey = 'api_key=b28f9cb8bea2883dc20a4d142ca9caf4';
+      const url = '$baseUrl/discover/movie?with_genres=100&$apiKey';
+
+      dioAdapter.onGet(
+        url,
+        (request) =>
+            request.reply(200, {'message': 'Successfully mocked GET!'}),
+      );
+
+      final onGetResponse = await dio.get(url);
+      print(onGetResponse.data);
+    });
+    test('Get Genre List', () async {
+      final dio = Dio();
+      final dioAdapter = DioAdapter(dio: dio);
+
+      const baseUrl = 'https://api.themoviedb.org/3';
+      const apiKey = 'api_key=b28f9cb8bea2883dc20a4d142ca9caf4';
+      const url = '$baseUrl/genre/movie/list?$apiKey';
+
+      dioAdapter.onGet(
+        url,
+        (request) =>
+            request.reply(200, {'message': 'Successfully mocked GET!'}),
+      );
+
+      final onGetResponse = await dio.get(url);
+      print(onGetResponse.data);
+    });
+
+    test('Get Trending Person', () async {
+      final dio = Dio();
+      final dioAdapter = DioAdapter(dio: dio);
+
+      const baseUrl = 'https://api.themoviedb.org/3';
+      const apiKey = 'api_key=b28f9cb8bea2883dc20a4d142ca9caf4';
+      const url = '$baseUrl/trending/person/week?$apiKey';
+
+      dioAdapter.onGet(
+        url,
+        (request) =>
+            request.reply(200, {'message': 'Successfully mocked GET!'}),
+      );
+
+      final onGetResponse = await dio.get(url);
+      print(onGetResponse.data);
     });
   });
 }
